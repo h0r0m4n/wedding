@@ -3,13 +3,13 @@ title: Hello World!
 layout: base
 ---
 
-<a href="/">{{ site.back.en }}</a>
+<a href="/">{{ site.back[locale] }}</a>
 
 <dl>
     <dt>Who</dt>
-    <dd>{{ site.newlyweds.en }}</dd>
+    <dd>{{ site.newlyweds[locale] }}</dd>
     <dt>When</dt>
     <dd>{{ site.date }}</dd>
     <dt>Where</dt>
-    <dd>{{ site.location.en }}</dd>
+    <dd>{{ site.location[locale] }}</dd>
 </dl>
