@@ -1,5 +1,11 @@
-const global = require('./_data/site');
+const global = require('./src/_data/site');
 
 module.exports = function(eleventyConfig) {
-    // TO-DO
+    // Configuration
+    return {
+    dir: {
+        input: 'src'
+    },
+        markdownTemplateEngine: 'njk'
+    };
 }
