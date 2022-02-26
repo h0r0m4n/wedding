@@ -1,13 +1,12 @@
 ---
-title: Hello World!
 layout: base
 ---
 
-<dl>
-    <dt>Who</dt>
-    <dd>{{ site.newlyweds }}</dd>
-    <dt>When</dt>
-    <dd>{{ site.date }}</dd>
-    <dt>Where</dt>
-    <dd>{{ site.location }}</dd>
-</dl>
+<script>
+    var language = window.navigator.language || navigator.browserLanguage;
+    if ( language == 'it-IT' ) {
+        window.location.href = '/it/';
+    } else {
+        window.location.href = '/en/';
+    }
+</script>

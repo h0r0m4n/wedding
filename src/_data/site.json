@@ -1,6 +1,19 @@
 {
-    "title": "Roman & Elena Wedding",
-    "newlyweds": "Roman & Elena",
+    "title": {
+        "en": "Roman & Elena Wedding",
+        "it": "Matrimonio di Roman ed Elena"
+    },
+    "newlyweds": {
+        "en": "Roman & Elena",
+        "it": "Roman ed Elena"
+    },
     "date": "12/12/2022",
-    "location": "Dublin"
+    "location": {
+        "en": "Dublin",
+        "it": "Dublino"
+    },
+    "back": {
+        "en": "Back",
+        "it": "Indietro"
+    }
 }
