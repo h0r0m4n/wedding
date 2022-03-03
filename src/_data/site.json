@@ -19,5 +19,10 @@
     "rights": {
         "en": "All rights reserved",
         "it": "Tutti i diritti riservati"
-    }
+    },
+    "build": {
+        "en": "Version",
+        "it": "Versione"
+    },
+    "version": "0.4"
 }
