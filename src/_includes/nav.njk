@@ -1,3 +1,9 @@
 <nav>
-    <a href="../">{{ site.back[locale] }}</a>
+    <ul>
+        {% for nav in collections[locale] %}
+            <li>
+                <a href="{{ nav.url }}" {% if page.url == nav.url %} style="font-weight: bold"{% endif %}>{{ nav.data.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
 </nav>
