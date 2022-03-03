@@ -15,5 +15,9 @@
     "back": {
         "en": "Back",
         "it": "Indietro"
+    },
+    "rights": {
+        "en": "All rights reserved",
+        "it": "Tutti i diritti riservati"
     }
 }
