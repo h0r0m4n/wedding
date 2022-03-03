@@ -9,6 +9,9 @@
         <header>
             <h1>{% if title %}{{ title }}{% else %}{{ site.title[locale] }}{% endif %}</h1>
         </header>
+        <nav>
+            <a href="../">{{ site.back[locale] }}</a>
+        </nav>
         <main>
             {{ content | safe }}
         </main>
