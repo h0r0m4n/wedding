@@ -1,0 +1,22 @@
+[
+    {
+        "question": {
+            "en": "Question #1",
+            "it": "Domanda #1"
+        },
+        "answer": {
+            "en": "Answer to the question #1",
+            "it": "Risposta alla domanda #1"
+        }
+    },
+    {
+        "question": {
+            "en": "Question #2",
+            "it": "Domanda #2"
+        },
+        "answer": {
+            "en": "Answer to the question #2",
+            "it": "Risposta alla domanda #2"
+        }
+    }
+]

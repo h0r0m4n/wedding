@@ -1,0 +1,13 @@
+---
+title: Questionnaire
+layout: base
+---
+
+<a href="/">{{ site.back[locale] }}</a>
+
+<dl>
+    {% for item in questionnaire %}
+        <dt>{{ item.question[locale] }}</dt>
+        <dd>{{ item.answer[locale] }}</dd>
+    {% endfor %}
+</dl>
