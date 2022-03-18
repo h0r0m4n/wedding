@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/h0r0m4n/wedding#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0"
+    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy-img": "^1.0.0",
+    "outdent": "^0.7.1",
+    "path": "^0.12.7"
   }
 }
