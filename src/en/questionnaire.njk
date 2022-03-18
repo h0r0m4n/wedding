@@ -1,0 +1,10 @@
+---
+title: Questionnaire
+layout: base
+---
+<dl>
+    {% for item in questionnaire %}
+        <dt>{{ item.question[locale] }}</dt>
+        <dd>{{ item.answer[locale] }}</dd>
+    {% endfor %}
+</dl>
