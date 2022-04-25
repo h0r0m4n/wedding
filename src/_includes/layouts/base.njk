@@ -6,12 +6,6 @@
         <title>{% if title %}{{ title }} – {{ site.title[locale] }}{% else %}{{ site.title[locale] }}{% endif %}</title>
     </head>
     <body>
-        {% include 'components/header.njk' %}
-        {% include 'components/nav.njk' %}
-        <main>
-            <h2>{{ title }}</h2>
-            {{ content | safe }}
-        </main>
-        {% include 'components/footer.njk' %}
+        {{ content | safe }}
     </body>
 </html>
