@@ -3,9 +3,13 @@
         "en": "Roman & Elena Wedding",
         "it": "Matrimonio di Roman ed Elena"
     },
-    "newlyweds": {
+    "romanAndElena": {
         "en": "Roman & Elena",
         "it": "Roman ed Elena"
+    },
+    "spouses": {
+        "en": "The spouses",
+        "it": "Gli sposi"
     },
     "date": "12/12/2022",
     "location": {
@@ -15,6 +19,22 @@
     "back": {
         "en": "Back",
         "it": "Indietro"
+    },
+    "who": {
+        "en": "Who",
+        "it": "Chi"
+    },
+    "when": {
+        "en": "When",
+        "it": "Quando"
+    },
+    "where": {
+        "en": "Where",
+        "it": "Dove"
+    },
+    "questionnaire": {
+        "en": "Questionnaire",
+        "it": "Questionario"
     },
     "rights": {
         "en": "All rights reserved",

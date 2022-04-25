@@ -2,12 +2,5 @@
 title: Home
 layout: layouts/page
 ---
-<dl>
-    <dt>Chi</dt>
-    <dd>{{ site.newlyweds[locale] }}</dd>
-    <dt>Quando</dt>
-    <dd>{{ site.date }}</dd>
-    <dt>Dove</dt>
-    <dd>{{ site.location[locale] }}</dd>
-</dl>
-{% image "src/static/roman-and-elena.jpg", "Roman ed Elena", "Roman ed Elena" %}
+{% include 'components/spouses.njk' %}
+{% include 'components/questionnaire.njk' %}
