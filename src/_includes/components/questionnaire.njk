@@ -1,9 +1,0 @@
-<section id="questionnaire">
-    <h2>{{ site.questionnaire[locale] }}</h2>
-    {% for item in questionnaire %}
-        <details>
-            <summary>{{ item.question[locale] }}</summary>
-            <p>{{ item.answer[locale] }}</p>
-        </details>
-    {% endfor %}
-</section>
