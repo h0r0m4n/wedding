@@ -1,8 +1,11 @@
 {
     "title": {
-        "en": "Roman & Elena Wedding",
-        "it": "Matrimonio di Roman ed Elena"
+        "en": "Elena’s & Roman’s fabulous Wedding",
+        "it": "Il favoloso matrimonio di Elena & Roman"
     },
+    "description": {
+        "en": "Welcome to Elena’s & Roman’s fabulous Wedding",
+        "it": "Benvenuti al favoloso matrimonio di Elena & Roman"
     },
     "rights": {
         "en": "All rights reserved",
