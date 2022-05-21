@@ -6,7 +6,7 @@ const global = require('./src/_data/site'),
 module.exports = function(eleventyConfig) {
     // Copy
     eleventyConfig
-        .addPassthroughCopy('static');
+        .addPassthroughCopy('./src/static/*.{woff,woff2}');
     
     // Image
     // Usage: {% image "static/file-name.jpg", "My alt…", "My caption…" %}
