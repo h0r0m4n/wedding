@@ -1,0 +1,22 @@
+<section id="{{ site.sections.contacts[locale] | slugify }}">
+    <div class="container">
+        <h2>{{ site.sections.contacts[locale] }}</h2>
+        <div class="columns-2">
+            {% if locale == 'it' %}
+                <p>Se non avete nessun potere telepatico potete contattarci qui:</p>
+                <ul>
+                    <li>EN + IT numero di Elena: <a href="tel:+353894338937">+353 894 338 937</a></li>
+                    <li>EN + IT + UA numero di Roman: <a href="tel:+353851252967">+353 851 252 967</a></li>
+                    <li>EN numero del Royal Marine Hotel: <a href="tel:+35312300030">+353 123 000 30</a></li>
+                </ul>
+            {% else %}
+                <p>If you don’t have any telepathic power, you can contact us here:</p>
+                <ul>
+                    <li>EN + IT Elena’s number: <a href="tel:+353894338937">+353 894 338 937</a></li>
+                    <li>EN + IT + UA Roman’s number: <a href="tel:+353851252967">+353 851 252 967</a></li>
+                    <li>EN Royal Marine Hotel number: <a href="tel:+35312300030">+353 123 000 30</a></li>
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+</section>

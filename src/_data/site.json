@@ -7,6 +7,28 @@
         "en": "Welcome to Elena’s & Roman’s fabulous Wedding",
         "it": "Benvenuti al favoloso matrimonio di Elena & Roman"
     },
+    "sections": {
+        "welcome": {
+            "en": "Welcome",
+            "it": "Benvenuti"
+        },
+        "dresscode": {
+            "en": "Dress code",
+            "it": "Abbigliamento"
+        },
+        "location_and_booking": {
+            "en": "Location & Booking",
+            "it": "Luogo & Prenotazioni"
+        },
+        "gifts": {
+            "en": "Gift Suggestion",
+            "it": "Regali"
+        },
+        "contacts": {
+            "en": "Contacts",
+            "it": "Contatti"
+        }
+    },
     "rights": {
         "en": "All rights reserved",
         "it": "Tutti i diritti riservati"

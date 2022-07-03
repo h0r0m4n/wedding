@@ -1,0 +1,12 @@
+<section id="{{ site.sections.dresscode[locale] | slugify }}">
+    <div class="container">
+        <h2>{{ site.sections.dresscode[locale] }}</h2>
+        <div class="columns-2">
+            {% if locale == 'it' %}
+                <p>Vi incoraggiamo a cogliere questa occasione per indossare il vostro vestito preferito, quello che avete comprato per “le occasioni speciali” e non ha mai avuto l’occasione di uscire dall’armadio. Vorremmo che voi vi sentiate al meglio di voi stessi, come una stella brillante nel cielo notturno. Non frenatevi e siate il più festivi che potete. L’unica richiesta che vi facciamo è di indossare qualcosa di blu (possibilmente Royal blue o simili), può essere solo un dettaglio, una camicia o persino i capelli. Scegliete voi, siate creativi, siate voi stessi. Tenete in considerazione che il matrimonio avrà luogo a Dicembre e che le attività si svolgeranno tutte all’interno dell’hotel.</p>
+            {% else %}
+                <p>We encourage you to take the chance of our wedding to pick your favourite dress, the one you bought for “special occasions” and never got the opportunity to get out of the wardrobe. We want you to feel the best version of yourself, like a shining star in the night sky. Don’t refrain yourself and be as festive as you can be. We only request from you to wear something blue (Royal blue or similar); it could be just a detail on your outfit, a blazer or even your hair. It’s up to you, be creative, be yourself. Keep in mind that the wedding will be in December and the activities will be indoor.</p>
+            {% endif %}
+        </div>
+    </div>
+</section>
