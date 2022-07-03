@@ -1,11 +1,11 @@
 <nav>
     <div class="container">
         <ul>
-            {% for nav in collections[locale] %}
+            {% for item, section in site.sections %}
                 <li>
-                    <a href="{{ nav.url }}" {% if page.url == nav.url %} style="font-weight: bold"{% endif %}>{{ nav.data.title }}</a>
+                    <a href="#{{ section[locale] | slugify }}">{{ section[locale] }}</a>
                 </li>
-            {% endfor %}
+            {%- endfor %}
         </ul>
     </div>
 </nav>
