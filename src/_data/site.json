@@ -37,5 +37,9 @@
         "en": "Version",
         "it": "Versione"
     },
+    "top": {
+        "en": "Top",
+        "it": "Torna all’inizio"
+    },
     "version": "0.8"
 }
