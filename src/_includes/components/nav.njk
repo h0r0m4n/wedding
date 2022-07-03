@@ -1,9 +1,11 @@
 <nav>
-    <ul>
-        {% for nav in collections[locale] %}
-            <li>
-                <a href="{{ nav.url }}" {% if page.url == nav.url %} style="font-weight: bold"{% endif %}>{{ nav.data.title }}</a>
-            </li>
-        {% endfor %}
-    </ul>
+    <div class="container">
+        <ul>
+            {% for nav in collections[locale] %}
+                <li>
+                    <a href="{{ nav.url }}" {% if page.url == nav.url %} style="font-weight: bold"{% endif %}>{{ nav.data.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
 </nav>
