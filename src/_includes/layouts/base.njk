@@ -110,7 +110,14 @@
 
             p + p { text-indent: 2ch }
 
-            i, em, address { font-weight: var(--text-paragraph-weight-italic) }
+            i, em, address {
+                font-weight: var(--text-paragraph-weight-italic);
+                font-style: normal;
+            }
+
+            code {
+                font-family: var(--text-paragraph-family);
+            }
 
             strong, b { font-weight: var(--text-paragraph-weight-bold) }
 
