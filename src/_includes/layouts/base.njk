@@ -72,32 +72,9 @@
             }
 
             body {
-                margin: var(--space-small);
                 font: var(--text-paragraph-weight) 1em/var(--text-paragraph-line-height) var(--text-paragraph-family);
                 background-color: var(--color-background);
                 color: var(--color-base);
-            }
-
-            @media (min-width: 37.5rem) {
-                body {
-                    margin: var(--space-medium);
-                }
-            }
-
-            @media (min-width: 50rem) {
-                body {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: var(--space-large);
-                    margin: var(--space-large);
-                }
-            }
-
-            @media (min-width: 50rem) {
-                footer {
-                    grid-column: 1 / -1;
-                }
             }
 
             h1, h2, h3, h4, h5, h6 {
@@ -156,6 +133,11 @@
 
             /* Helpers ------------------------------------------------------ */
 
+            .container {
+                margin-inline: auto;
+                max-width: 50rem;
+            }
+
             @media (min-width: 50rem) {
                 .columns-2 {
                     column-count: 2;
@@ -165,6 +147,15 @@
             }
 
             /* Layout ------------------------------------------------------- */
+            
+            header {
+
+            }
+
+            main {
+                
+            }
+
         </style>
     </head>
     <body>
