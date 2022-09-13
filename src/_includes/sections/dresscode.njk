@@ -1,7 +1,10 @@
-<section id="{{ site.sections.dresscode[locale] | slugify }}" class="{{ site.sections.dresscode.en | slugify }}">
+<section id="{{ site.sections.dresscode[locale] | slugify }}" class="{{ site.sections.dresscode.en | slugify }} section section-theme--2">
     <div class="container">
-        <h2>{{ site.sections.dresscode[locale] }}</h2>
-        <div class="columns-2">
+        <div class="section-header">
+            {% include 'svgs/dress-code.svg' %}
+            <h2>{{ site.sections.dresscode[locale] }}</h2>
+        </div>
+        <div class="section-body">
             {% if locale == 'it' %}
                 <p>Vi incoraggiamo a cogliere questa occasione per indossare il vostro vestito preferito, quello che avete comprato per “le occasioni speciali” e non ha mai avuto l’occasione di uscire dall’armadio. Vorremmo che voi vi sentiate al meglio di voi stessi, come una stella brillante nel cielo notturno. Non frenatevi e siate il più festivi che potete. L’unica richiesta che vi facciamo è di indossare qualcosa di blu (possibilmente Royal blue o simili), può essere solo un dettaglio, una camicia o persino i capelli. Scegliete voi, siate creativi, siate voi stessi. Tenete in considerazione che il matrimonio avrà luogo a Dicembre e che le attività si svolgeranno tutte all’interno dell’hotel.</p>
             {% else %}

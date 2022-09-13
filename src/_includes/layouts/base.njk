@@ -9,17 +9,17 @@
             /* Webfonts ----------------------------------------------------- */
 
             @font-face {
-                font-family: 'Quicksand';
+                font-family: 'Cirka';
                 font-style: normal;
                 font-weight: 400;
-                src: local(''), url('/static/quicksand-v29-latin-regular.woff2') format('woff2'), url('/static/quicksand-v29-latin-regular.woff') format('woff');
+                src: local(''), url('/static/circa-regular.woff2') format('woff2'), url('/static/circa-regular.woff') format('woff');
             }
 
             @font-face {
-                font-family: 'Quicksand';
+                font-family: 'Cirka';
                 font-style: normal;
-                font-weight: 600;
-                src: local(''), url('/static/quicksand-v29-latin-600.woff2') format('woff2'), url('/static/quicksand-v29-latin-600.woff') format('woff');
+                font-weight: 700;
+                src: local(''), url('/static/cirka-bold.woff2') format('woff2'), url('/static/cirka-bold.woff') format('woff');
             }
             
             @font-face {
@@ -30,7 +30,6 @@
             }
 
             /* Variables ---------------------------------------------------- */
-
             :root {
                 /* Colours -------------------- */
                 --color-background: #fff;
@@ -39,16 +38,23 @@
                 --color-brand-hover: #D2A24F;
                 --color-highlight: #083AD1;
 
+                --color-white: #FFF;
+                --color-pink: #FFF0E8;
+                --color-gold-1: #F2CA85;
+                --color-gold-2: #D2A24F;
+                --color-gold-3: #AF7F2D;
+                --color-blue: #083AD1;
+
                 /* Typography ----------------- */
 
                 /* Paragraph */
 
-                --text-paragraph-family: 'Quicksand', sans;
+                --text-paragraph-family: 'Cirka', sans;
                 --text-paragraph-line-height: 1.5;
                 --text-paragraph-weight: 400;
                 --text-paragraph-weight-italic: 400;
-                --text-paragraph-weight-bold: 600;
-                --text-paragraph-weight-bold-italic: 600;
+                --text-paragraph-weight-bold: 700;
+                --text-paragraph-weight-bold-italic: 700;
 
                 /* Heading */
 
@@ -59,10 +65,20 @@
 
                 /* Spacing -------------------- */
 
-                --space-tiny: 0.5rem;
-                --space-small: 1rem;
-                --space-medium: 2rem;
-                --space-large: 4rem;
+                --space-tiny: 0.5em;
+                --space-small: 1em;
+                --space-medium: 2em;
+                --space-large: 4em;
+
+                /* Radius --------------------- */
+
+                --radius: var(--space-small);
+            }
+
+            @media (min-width: 80rem) {
+                :root {
+                    --radius: var(--space-medium);
+                }
             }
 
             /* Base --------------------------------------------------------- */
@@ -73,9 +89,19 @@
             }
 
             body {
-                font: var(--text-paragraph-weight) 1em/var(--text-paragraph-line-height) var(--text-paragraph-family);
-                background-color: var(--color-background);
-                color: var(--color-base);
+                font: var(--text-paragraph-weight) 1.5em/var(--text-paragraph-line-height) var(--text-paragraph-family);
+                background-color: var(--color-white);
+                color: var(--color-gold-3);
+                margin: var(--space-small);
+                word-break: break-word;
+            }
+
+            @media (min-width: 37.5rem) {
+                body { font-size: 1.75em }
+            }
+
+            @media (min-width: 80rem) {
+                body { font-size: 2em }
             }
 
             h1, h2, h3, h4, h5, h6 {
@@ -84,17 +110,17 @@
                 line-height: var(--text-heading-line-height);
                 margin-top: 0;
                 margin-bottom: var(--space-small);
-                color: var(--color-brand);
+                color: var(--color-gold-2);
             }
 
-            h1 { font-size: 4rem }
-            h2 { font-size: 2.5rem }
-            h3 { font-size: 2rem }
-            h4 { font-size: 1.75rem }
-            h5 { font-size: 1.5rem }
-            h6 { font-size: 1rem }
+            h1 { font-size: 4em }
+            h2 { font-size: 2.5em }
+            h3 { font-size: 2em }
+            h4 { font-size: 1.75em }
+            h5 { font-size: 1.5em }
+            h6 { font-size: 1em }
 
-            h2 + p::first-letter {
+            /* h2 + p::first-letter {
                 float: left;
                 font-family: var(--text-heading-family);
                 font-weight: var(--text-heading-weight);
@@ -103,19 +129,26 @@
                 margin-top: calc(var(--space-small) * -1);
                 margin-right: var(--space-tiny);
                 color: var(--color-brand);
-            }
+            } */
 
             p {
-                margin: 0;
                 orphans: 2;
             }
 
-            p + p { text-indent: 2ch }
+            /* p + p { text-indent: 2ch } */
 
             i, em, address {
                 font-weight: var(--text-paragraph-weight-italic);
                 font-style: normal;
             }
+
+            dl { margin: 0 }
+            dd {
+                margin-left: 0;
+                margin-bottom: var(--space-tiny);
+            }
+
+            dd:last-of-type { margin-bottom: 0 }
 
             code {
                 font-family: var(--text-paragraph-family);
@@ -123,13 +156,22 @@
 
             strong, b { font-weight: var(--text-paragraph-weight-bold) }
 
-            a { color: var(--color-brand) }
-            a:hover { color: var(--color-brand-hover) }
+            a {
+                color: var(--color-gold-3);
+                text-decoration-thickness: max(1px, 0.0625rem);
+                text-underline-offset: 0.1em;
+            }
+            a:hover {
+                color: var(--color-gold-2);
+                text-decoration-thickness: max(2px,0.1875rem,0.12em);
+                text-decoration-skip-ink: none;
+                text-decoration-skip: none;
+            }
 
             hr {
                 column-span: all;
                 border: 0;
-                border-bottom: 1px solid var(--color-brand);
+                border-bottom: 1px solid var(--color-gold-1);
                 clear: both;
                 display: block;
                 height: 1px;
@@ -143,32 +185,230 @@
 
             /* Helpers ------------------------------------------------------ */
 
-            .container {
-                margin-inline: auto;
-                max-width: 50rem;
+            .visually-hidden {
+                clip: rect(0 0 0 0);
+                clip-path: inset(50%);
+                height: 1px;
+                overflow: hidden;
+                position: absolute;
+                white-space: nowrap;
+                width: 1px;
             }
 
+            .container {
+                margin-inline: auto;
+                max-width: 60rem;
+                padding: var(--space-small);
+            }
+
+            @media (min-width: 37.5rem) {
+                .container { padding: var(--space-medium) }
+            }
+
+            @media (min-width: 80rem) {
+                .container { padding: var(--space-large) }
+            }
+
+            .lead { font-size: 125% }
+
+            .label {
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-size: 50%;
+            }
+
+            .small { font-size: 80% }
+
+            .micro { font-size: 60% }
+
+            /* Header ------------------------------------------------------- */
+
+            header { text-align: center }
+
             @media (min-width: 50rem) {
-                .columns-2 {
-                    column-count: 2;
-                    column-gap: var(--space-large);
-                    /* column-rule: 1px solid var(--color-highlight); */
+                header {
+                    padding-top: var(--space-medium);
+                    padding-bottom: var(--space-medium);
                 }
             }
 
-            /* Layout ------------------------------------------------------- */
-            
-            header {
-
+            header svg {
+                width: 100%;
+                max-width: 76rem;
+                height: auto;
             }
 
-            main {
-                
+            header address { margin-top: var(--space-small) }
+            header address p {
+                margin: 0;
+                color: var(--color-gold-2)
             }
 
+            /* Nav ---------------------------------------------------------- */
+
+            nav {
+                margin-top: var(--space-large);
+            }
+
+            @media (max-width: 49.3975rem) {
+                nav { margin-bottom: var(--space-large) }
+            }
+
+            nav ul {
+                list-style: none;
+                margin: 0;
+                padding-left: 0;
+                text-align: center;
+            }
+
+            @media (min-width: 50rem) {
+                nav li {
+                    display: inline-block;
+                    margin-right: var(--space-small);
+                }
+            }
+
+            nav li:last-of-type { margin-right: 0 }
+
+            @media (max-width: 49.3975rem) {
+                nav a {
+                    display: block;
+                }
+            }
+
+            /* Section ------------------------------------------------------ */
+
+            .section {
+                padding-top: var(--space-medium);
+                padding-bottom: var(--space-medium);
+            }
+
+            .section h1,
+            .section h2,
+            .section h3,
+            .section h4,
+            .section h5,
+            .section h6 { text-align: center }
+
+            .section .container { border-radius: var(--radius) }
+
+            .section-header { text-align: center }
+            .section-header svg {
+                width: 100%;
+                max-width: 48rem;
+                height: auto;
+                margin-bottom: var(--space-small);
+            }
+
+            .section-body .icon {
+                text-align: center;
+                margin: var(--space-medium) auto 0;
+            }
+
+            .section-theme--1 .container {
+                background-color: var(--color-pink);
+                border: 2px solid var(--color-gold-2);
+            }
+            .section-theme--1 .container h1,
+            .section-theme--1 .container h2,
+            .section-theme--1 .container h3,
+            .section-theme--1 .container h4,
+            .section-theme--1 .container h5,
+            .section-theme--1 .container h6 { color: var(--color-gold-2) }
+            .section-theme--1 .container p,
+            .section-theme--1 .container ol,
+            .section-theme--1 .container ul { color: var(--color-gold-3) }
+
+            .section-theme--2 .container { background-color: var(--color-blue) }
+            .section-theme--2 .container h1,
+            .section-theme--2 .container h2,
+            .section-theme--2 .container h3,
+            .section-theme--2 .container h4,
+            .section-theme--2 .container h5, 
+            .section-theme--2 .container h6 { color: var(--color-gold-2) }
+            .section-theme--2 .container p,
+            .section-theme--2 .container ol,
+            .section-theme--2 .container ul { color: var(--color-gold-1) }
+
+            /* Cards -------------------------------------------------------- */
+
+            .cards {
+                display: grid;
+                gap: var(--space-small);
+                margin: var(--space-small) 0 0;
+                padding-left: 0;
+                list-style: none;
+            }
+
+            @media (min-width: 80rem) {
+                .cards {
+                    margin: var(--space-medium) 0 0;
+                    gap: var(--space-medium);
+                }
+                .cards--2 {
+                    grid-template-columns: 1fr 1fr;
+                }
+                .cards--3 {
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+            }
+
+            .cards-item {
+                border: 2px solid currentColor;
+                padding: var(--space-small);
+                border-radius: var(--radius);
+            }
+
+            @media (min-width: 37.5rem) {
+                .card-item { padding: var(--space-medium) }
+            }
+
+            @media (min-width: 80rem) {
+                .card-item { padding: var(--space-large) }
+            }
+
+            /* Continue ----------------------------------------------------- */
+
+            .continue {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: var(--space-medium);
+                margin: var(--space-small) 0;
+            }
+
+            @media (min-width: 37.5rem) {
+                .continue {
+                    margin: var(--space-medium) 0;
+                }
+            }
+
+            @media (min-width: 80rem) {
+                .continue {
+                    gap: var(--space-large);
+                    margin: var(--space-large) 0;
+                }
+            }
+
+            /* Footer ------------------------------------------------------- */
+
+            footer {
+                text-align: center;
+            }
         </style>
     </head>
     <body id="top">
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="star-large" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 60 60">
+                <path stroke="#D2A24F" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" stroke-width="2" d="M30.22 4v52.37M7 30.17h46.44M12.44 45.13l35.55-29.89M14.54 13.05 45.9 47.29"/>
+            </symbol>
+            <symbol id="star-medium" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40">
+                <path stroke="#D2A24F" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" stroke-width="2" d="M20.3 3v34.58M4 20.3h32.6M7.82 30.16l24.96-19.73M9.3 8.98 31.32 31.6"/>
+            </symbol>
+            <symbol id="star-small" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 36 36">
+                <path stroke="#D2A24F" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" stroke-width="2" d="M18.15 3v29.64M5 17.81h26.29M8.51 8.89l19.27 17.88"/>
+            </symbol>
+        </svg>
         {{ content | safe }}
     </body>
     <script defer>

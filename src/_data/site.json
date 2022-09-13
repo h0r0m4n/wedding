@@ -21,8 +21,8 @@
             "it": "Luogo & Prenotazioni"
         },
         "gifts": {
-            "en": "Gift Suggestion",
-            "it": "Regali"
+            "en": "Gift Recommendation",
+            "it": "Raccomandazione regalo"
         },
         "contacts": {
             "en": "Contacts",
@@ -41,5 +41,5 @@
         "en": "Top",
         "it": "Torna all’inizio"
     },
-    "version": "0.8"
+    "version": "1.0"
 }
