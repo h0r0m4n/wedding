@@ -113,11 +113,15 @@
             }
 
             body {
-                font: var(--text-paragraph-weight) 1.5em/var(--text-paragraph-line-height) var(--text-paragraph-family);
+                font: var(--text-paragraph-weight) 1.25em/var(--text-paragraph-line-height) var(--text-paragraph-family);
                 background-color: var(--color-white);
                 color: var(--color-gold-3);
                 margin: var(--space-small);
                 word-break: break-word;
+            }
+
+            @media (min-width: 30rem) {
+                body { font-size: 1.5em }
             }
 
             @media (min-width: 37.5rem) {
@@ -133,7 +137,7 @@
                 font-weight: var(--text-heading-weight);
                 line-height: var(--text-heading-line-height);
                 margin-top: 0;
-                margin-bottom: var(--space-small);
+                margin-bottom: var(--space-tiny);
                 color: var(--color-gold-2);
             }
 
