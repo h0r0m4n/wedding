@@ -1,39 +1,39 @@
 <!DOCTYPE html>
-<html lang="{{ lang }}">
+<html lang="">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="{{ site.description[locale] }}">
+        <meta name="description" content="">
         <meta name="robots" content="noindex, nofollow, noarchive, notranslate, noimageindex">
         <meta name="theme-color" content="#083ad1">
-        {# Meta #}
-        <meta property="og:locale" content="{{ lang }}">
+        
+        <meta property="og:locale" content="">
         <meta property="og:type" content="website">
-        <meta property="og:title" content="{% if title %}{{ title }} – {{ site.title[locale] }}{% else %}{{ site.title[locale] }}{% endif %}">
-        <meta property="og:description" content="{{ site.description[locale] }}">
-        <meta property="og:url" content="{{ site.url | url }}">
-        <meta property="og:site_name" content="{{ site.author }}">
-        <meta property="og:image" content="{{ site.url + '/static/preview.jpg' | url }}">
-        {# Twitter #}
+        <meta property="og:title" content="">
+        <meta property="og:description" content="">
+        <meta property="og:url" content="https://wedding.horoman.com">
+        <meta property="og:site_name" content="Roman &amp; Elena">
+        <meta property="og:image" content="https://wedding.horoman.com/static/preview.jpg">
+        
         <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="@h0r0m4n">
         <meta name="twitter:creator" content="@h0r0m4n">
-        <meta name="twitter:title" property="og:title" content="{% if title %}{{ title }} – {{ site.title[locale] }}{% else %}{{ site.title[locale] }}{% endif %}">
-        <meta name="twitter:description" property="og:description" content="{{ site.description[locale] }}">
-        <meta name="twitter:url" property="og:url" content="{{ site.url | url }}">
-        <meta name="twitter:image" property="og:image" content="{{ site.url + '/static/preview.jpg' | url }}">
-        {# Pinterest #}
+        <meta name="twitter:title" property="og:title" content="">
+        <meta name="twitter:description" property="og:description" content="">
+        <meta name="twitter:url" property="og:url" content="https://wedding.horoman.com">
+        <meta name="twitter:image" property="og:image" content="https://wedding.horoman.com/static/preview.jpg">
+        
         <meta name="pinterest-rich-pin" content="false">
-        {# Title #}
-        <title>{% if title %}{{ title }} – {{ site.title[locale] }}{% else %}{{ site.title[locale] }}{% endif %}</title>
-        <link rel="canonical" href="{{ site.url | url }}">
-        {# Icons #}
-        <link rel="apple-touch-icon" sizes="180x180" href="{{ site.url + '/apple-touch-icon.png' | url }}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{{ site.url + '/favicon-32x32.png' | url }}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{{ site.url + '/favicon-16x16.png' | url }}">
-        <link rel="manifest" href="{{ site.url + '/site.webmanifest' | url }}">
-        <link rel="mask-icon" href="{{ site.url + '/safari-pinned-tab.svg' | url }}" color="#5bbad5">
-        {# Styles #}
+        
+        <title></title>
+        <link rel="canonical" href="https://wedding.horoman.com">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="https://wedding.horoman.com/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://wedding.horoman.com/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://wedding.horoman.com/favicon-16x16.png">
+        <link rel="manifest" href="https://wedding.horoman.com/site.webmanifest">
+        <link rel="mask-icon" href="https://wedding.horoman.com/safari-pinned-tab.svg" color="#5bbad5">
+        
         <style>
             /* Webfonts ----------------------------------------------------- */
 
@@ -433,7 +433,7 @@
         </style>
     </head>
     <body id="top">
-        {# SVG symbols #}
+        
         <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
             <symbol id="star-large" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 60 60">
                 <path stroke="#D2A24F" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" stroke-width="2" d="M30.22 4v52.37M7 30.17h46.44M12.44 45.13l35.55-29.89M14.54 13.05 45.9 47.29"/>
@@ -445,8 +445,15 @@
                 <path stroke="#D2A24F" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" stroke-width="2" d="M18.15 3v29.64M5 17.81h26.29M8.51 8.89l19.27 17.88"/>
             </symbol>
         </svg>
-        {# Content #}
-        {{ content | safe }}
+        
+        <script>
+    var language = window.navigator.language || navigator.browserLanguage;
+    if ( language == 'it-IT' ) {
+        window.location.href = '/it/';
+    } else {
+        window.location.href = '/en/';
+    }
+</script>
     </body>
     <script>
         function removeLocationHash(){
