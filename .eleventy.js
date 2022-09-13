@@ -7,7 +7,7 @@ module.exports = function(eleventyConfig) {
     // Copy
     eleventyConfig
         .addPassthroughCopy('./src/static/*.{woff,woff2}')
-        .addPassthroughCopy("src/*.{png,svg,ico}")
+        .addPassthroughCopy("src/*.{png,svg,jpg,ico}")
         .addPassthroughCopy("src/site.webmanifest")
         .addPassthroughCopy("src/CNAME");
     
