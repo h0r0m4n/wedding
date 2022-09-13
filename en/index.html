@@ -243,6 +243,19 @@
                 .micro { font-size: 60% }
             }
 
+            .line {
+                display: inline-block;
+                content: '';
+                width: 2px;
+                height: 8rem;
+                background-color: var(--color-gold-2);
+                margin: var(--space-medium) auto;
+            }
+
+            @media (min-width: 50rem) {
+                .line { height: 10rem }
+            }
+
             /* Header ------------------------------------------------------- */
 
             header { text-align: center }
@@ -267,10 +280,6 @@
             }
 
             /* Nav ---------------------------------------------------------- */
-
-            nav {
-                margin-top: var(--space-large);
-            }
 
             @media (max-width: 49.3975rem) {
                 nav { margin-bottom: var(--space-large) }
@@ -488,6 +497,7 @@
         
         <p>Royal Marine Hotel</p>
     </address>
+    <div class="line"></div>
     <nav>
         <ul>
             
@@ -919,7 +929,7 @@
 </main>
 <footer>
     <div class="container">
-        <p class="small">© Elena &amp; Roman’s Wedding 2022. All rights reserved. Version v1.5. <a href="#top">Top</a></p>
+        <p class="small">© Elena &amp; Roman’s Wedding 2022. All rights reserved. Version v1.6. <a href="#top">Top</a></p>
         <p>&#10084;</p>
     </div>
 </footer>
