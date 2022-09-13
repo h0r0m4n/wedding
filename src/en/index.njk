@@ -1,13 +1,14 @@
 ---
 title: Home
-layout: base
+layout: layouts/page
 ---
-<dl>
-    <dt>Who</dt>
-    <dd>{{ site.newlyweds[locale] }}</dd>
-    <dt>When</dt>
-    <dd>{{ site.date }}</dd>
-    <dt>Where</dt>
-    <dd>{{ site.location[locale] }}</dd>
-</dl>
-{% image "src/static/roman-and-elena.jpg", "Roman and Elena", "Roman and Elena" %}
+{% include 'sections/continue.njk' %}
+{% include 'sections/welcome.njk' %}
+{% include 'sections/continue.njk' %}
+{% include 'sections/dresscode.njk' %}
+{% include 'sections/continue.njk' %}
+{% include 'sections/location-and-booking.njk' %}
+{% include 'sections/continue.njk' %}
+{% include 'sections/gifts.njk' %}
+{% include 'sections/continue.njk' %}
+{% include 'sections/contacts.njk' %}

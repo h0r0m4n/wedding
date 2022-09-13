@@ -1,0 +1,25 @@
+<header>    
+    <h1 class="visually-hidden">{{ site.title[locale] }}</h1>
+    {% if locale == 'it' %}
+        {% include 'svgs/intro-it.svg' %}
+    {% else %}
+        {% include 'svgs/intro-en.svg' %}
+    {% endif %}
+    <address>
+        {% if locale == 'it' %}
+            <p class="lead"><time datetime="2008-02-14 20:00">12 Dicembre 2022</time></p>
+        {% else %}
+            <p class="lead"><time datetime="2008-02-14 20:00">December 12th, 2022</time></p>
+        {% endif %}
+        <p>Royal Marine Hotel</p>
+    </address>
+    <nav>
+        <ul>
+            {% for item, section in site.sections %}
+                <li>
+                    <a href="#{{ section[locale] | slugify }}">{{ section[locale] }}</a>
+                </li>
+            {%- endfor %}
+        </ul>
+    </nav>
+</header>

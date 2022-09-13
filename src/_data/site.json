@@ -1,20 +1,33 @@
 {
     "title": {
-        "en": "Roman & Elena Wedding",
-        "it": "Matrimonio di Roman ed Elena"
+        "en": "Elena & Roman’s Wedding",
+        "it": "Il matrimonio di Elena & Roman"
     },
-    "newlyweds": {
-        "en": "Roman & Elena",
-        "it": "Roman ed Elena"
+    "description": {
+        "en": "Welcome to Elena’s & Roman’s fabulous Wedding",
+        "it": "Benvenuti al favoloso matrimonio di Elena & Roman"
     },
-    "date": "12/12/2022",
-    "location": {
-        "en": "Dublin",
-        "it": "Dublino"
-    },
-    "back": {
-        "en": "Back",
-        "it": "Indietro"
+    "sections": {
+        "welcome": {
+            "en": "Welcome",
+            "it": "Benvenuti"
+        },
+        "dresscode": {
+            "en": "Dress code",
+            "it": "Abbigliamento"
+        },
+        "location_and_booking": {
+            "en": "Location & Booking",
+            "it": "Luogo & Prenotazioni"
+        },
+        "gifts": {
+            "en": "Gift Recommendation",
+            "it": "Raccomandazione regalo"
+        },
+        "contacts": {
+            "en": "Contacts",
+            "it": "Contatti"
+        }
     },
     "rights": {
         "en": "All rights reserved",
@@ -24,5 +37,11 @@
         "en": "Version",
         "it": "Versione"
     },
-    "version": "0.4"
+    "top": {
+        "en": "Top",
+        "it": "Torna all’inizio"
+    },
+    "version": "1.0",
+    "url": "https://wedding.horoman.com",
+    "author": "Roman & Elena"
 }

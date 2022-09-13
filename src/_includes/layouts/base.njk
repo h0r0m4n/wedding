@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="{{ site.description[locale] }}">
+        <meta name="robots" content="noindex, nofollow, noarchive, notranslate, noimageindex">
+        <meta name="theme-color" content="#083ad1">
+        {# Meta #}
+        <meta property="og:locale" content="{{ lang }}">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="{% if title %}{{ title }} – {{ site.title[locale] }}{% else %}{{ site.title[locale] }}{% endif %}">
+        <meta property="og:description" content="{{ site.description[locale] }}">
+        <meta property="og:url" content="{{ site.url | url }}">
+        <meta property="og:site_name" content="{{ site.author }}">
+        <meta property="og:image" content="{{ site.url + '/static/preview.jpg' | url }}">
+        {# Twitter #}
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@h0r0m4n">
+        <meta name="twitter:creator" content="@h0r0m4n">
+        <meta name="twitter:title" property="og:title" content="{% if title %}{{ title }} – {{ site.title[locale] }}{% else %}{{ site.title[locale] }}{% endif %}">
+        <meta name="twitter:description" property="og:description" content="{{ site.description[locale] }}">
+        <meta name="twitter:url" property="og:url" content="{{ site.url | url }}">
+        <meta name="twitter:image" property="og:image" content="{{ site.url + '/static/preview.jpg' | url }}">
+        {# Pinterest #}
+        <meta name="pinterest-rich-pin" content="false">
+        {# Title #}
+        <title>{% if title %}{{ title }} – {{ site.title[locale] }}{% else %}{{ site.title[locale] }}{% endif %}</title>
+        <link rel="canonical" href="{{ site.url | url }}">
+        {# Icons #}
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ site.url + '/apple-touch-icon.png' | url }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ site.url + '/favicon-32x32.png' | url }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ site.url + '/favicon-16x16.png' | url }}">
+        <link rel="manifest" href="{{ site.url + '/site.webmanifest' | url }}">
+        <link rel="mask-icon" href="{{ site.url + '/safari-pinned-tab.svg' | url }}" color="#5bbad5">
+        {# Styles #}
+        <style>
+            /* Webfonts ----------------------------------------------------- */
+
+            @font-face {
+                font-family: 'Cirka';
+                font-style: normal;
+                font-weight: 400;
+                src: local(''), url('/static/cirka-regular.woff2') format('woff2'), url('/static/circa-regular.woff') format('woff');
+            }
+
+            @font-face {
+                font-family: 'Cirka';
+                font-style: normal;
+                font-weight: 700;
+                src: local(''), url('/static/cirka-bold.woff2') format('woff2'), url('/static/cirka-bold.woff') format('woff');
+            }
+            
+            @font-face {
+                font-family: 'Sail';
+                font-style: normal;
+                font-weight: 400;
+                src: local(''), url('/static/sail-v16-latin-regular.woff2') format('woff2'), url('/static/sail-v16-latin-regular.woff') format('woff');
+            }
+
+            /* Variables ---------------------------------------------------- */
+            :root {
+                /* Colours -------------------- */
+                --color-white: #FFF;
+                --color-pink: #FFF0E8;
+                --color-gold-1: #F2CA85;
+                --color-gold-2: #D2A24F;
+                --color-gold-3: #AF7F2D;
+                --color-blue: #083AD1;
+
+                /* Typography ----------------- */
+
+                /* Paragraph */
+
+                --text-paragraph-family: 'Cirka', sans;
+                --text-paragraph-line-height: 1.5;
+                --text-paragraph-weight: 400;
+                --text-paragraph-weight-italic: 400;
+                --text-paragraph-weight-bold: 700;
+                --text-paragraph-weight-bold-italic: 700;
+
+                /* Heading */
+
+                --text-heading-family: 'Sail', sans;
+                --text-heading-line-height: 1;
+                --text-heading-weight: 400;
+                --text-heading-weight-italic: 400;
+
+                /* Spacing -------------------- */
+
+                --space-tiny: 0.5em;
+                --space-small: 1em;
+                --space-medium: 2em;
+                --space-large: 4em;
+
+                /* Radius --------------------- */
+
+                --radius-1: var(--space-tiny);
+                --radius-2: var(--space-small);
+            }
+
+            @media (min-width: 80rem) {
+                :root {
+                    --radius-1: var(--space-small);
+                    --radius-2: var(--space-medium);
+                }
+            }
+
+            /* Base --------------------------------------------------------- */
+
+            html {
+                overflow-x: hidden;
+                scroll-behavior: smooth;
+            }
+
+            body {
+                font: var(--text-paragraph-weight) 1.5em/var(--text-paragraph-line-height) var(--text-paragraph-family);
+                background-color: var(--color-white);
+                color: var(--color-gold-3);
+                margin: var(--space-small);
+                word-break: break-word;
+            }
+
+            @media (min-width: 37.5rem) {
+                body { font-size: 1.75em }
+            }
+
+            @media (min-width: 80rem) {
+                body { font-size: 2em }
+            }
+
+            h1, h2, h3, h4, h5, h6 {
+                font-family: var(--text-heading-family);
+                font-weight: var(--text-heading-weight);
+                line-height: var(--text-heading-line-height);
+                margin-top: 0;
+                margin-bottom: var(--space-small);
+                color: var(--color-gold-2);
+            }
+
+            h1 { font-size: 4em }
+            h2 { font-size: 2.5em }
+            h3 { font-size: 2em }
+            h4 { font-size: 1.75em }
+            h5 { font-size: 1.5em }
+            h6 { font-size: 1em }
+
+            p {
+                orphans: 2;
+            }
+
+            /* p + p { text-indent: 2ch } */
+
+            i, em, address {
+                font-weight: var(--text-paragraph-weight-italic);
+                font-style: normal;
+            }
+
+            dl { margin: 0 }
+            dd {
+                margin-left: 0;
+                margin-bottom: var(--space-tiny);
+            }
+
+            dd:last-of-type { margin-bottom: 0 }
+
+            code {
+                font-family: var(--text-paragraph-family);
+            }
+
+            strong, b { font-weight: var(--text-paragraph-weight-bold) }
+
+            a {
+                color: var(--color-gold-3);
+                text-decoration-thickness: max(1px, 0.0625rem);
+                text-underline-offset: 0.1em;
+            }
+            a:hover {
+                color: var(--color-gold-2);
+                text-decoration-thickness: max(2px,0.1875rem,0.12em);
+                text-decoration-skip-ink: none;
+                text-decoration-skip: none;
+            }
+
+            hr {
+                column-span: all;
+                border: 0;
+                border-bottom: 1px solid var(--color-gold-1);
+                clear: both;
+                display: block;
+                height: 1px;
+                margin: var(--space-small) 0;
+                padding: 0;
+            }
+
+            @media (min-width: 37.5rem) {
+                hr { margin: var(--space-medium) 0 }
+            }
+
+            /* Helpers ------------------------------------------------------ */
+
+            .visually-hidden {
+                clip: rect(0 0 0 0);
+                clip-path: inset(50%);
+                height: 1px;
+                overflow: hidden;
+                position: absolute;
+                white-space: nowrap;
+                width: 1px;
+            }
+
+            .container {
+                margin-inline: auto;
+                max-width: 60rem;
+                padding: var(--space-small);
+            }
+
+            @media (min-width: 37.5rem) {
+                .container { padding: var(--space-medium) }
+            }
+
+            @media (min-width: 80rem) {
+                .container { padding: var(--space-large) }
+            }
+
+            .lead { font-size: 125% }
+
+            .label {
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-size: 50%;
+            }
+
+            .small { font-size: 80% }
+
+            .micro { font-size: 60% }
+
+            /* Header ------------------------------------------------------- */
+
+            header { text-align: center }
+
+            @media (min-width: 50rem) {
+                header {
+                    padding-top: var(--space-medium);
+                    padding-bottom: var(--space-medium);
+                }
+            }
+
+            header svg {
+                width: 100%;
+                max-width: 76rem;
+                height: auto;
+            }
+
+            header address { margin-top: var(--space-small) }
+            header address p {
+                margin: 0;
+                color: var(--color-gold-2)
+            }
+
+            /* Nav ---------------------------------------------------------- */
+
+            nav {
+                margin-top: var(--space-large);
+            }
+
+            @media (max-width: 49.3975rem) {
+                nav { margin-bottom: var(--space-large) }
+            }
+
+            nav ul {
+                list-style: none;
+                margin: 0;
+                padding-left: 0;
+                text-align: center;
+            }
+
+            @media (min-width: 50rem) {
+                nav li {
+                    display: inline-block;
+                    margin-right: var(--space-small);
+                }
+            }
+
+            nav li:last-of-type { margin-right: 0 }
+
+            @media (max-width: 49.3975rem) {
+                nav a {
+                    display: block;
+                }
+            }
+
+            /* Section ------------------------------------------------------ */
+
+            .section {
+                padding-top: var(--space-medium);
+                padding-bottom: var(--space-medium);
+            }
+
+            .section h1,
+            .section h2,
+            .section h3,
+            .section h4,
+            .section h5,
+            .section h6 { text-align: center }
+
+            .section .container { border-radius: var(--radius-2) }
+
+            .section-header { text-align: center }
+            .section-header svg {
+                width: 100%;
+                max-width: 48rem;
+                height: auto;
+                margin-bottom: var(--space-small);
+            }
+
+            .section-body .icon {
+                text-align: center;
+                margin: var(--space-medium) auto 0;
+            }
+
+            .section-theme--1 .container {
+                background-color: var(--color-pink);
+                border: 4px solid var(--color-gold-2);
+            }
+            .section-theme--1 .container h1,
+            .section-theme--1 .container h2,
+            .section-theme--1 .container h3,
+            .section-theme--1 .container h4,
+            .section-theme--1 .container h5,
+            .section-theme--1 .container h6 { color: var(--color-gold-2) }
+            .section-theme--1 .container p,
+            .section-theme--1 .container ol,
+            .section-theme--1 .container ul { color: var(--color-gold-3) }
+
+            .section-theme--2 .container { background-color: var(--color-blue) }
+            .section-theme--2 .container h1,
+            .section-theme--2 .container h2,
+            .section-theme--2 .container h3,
+            .section-theme--2 .container h4,
+            .section-theme--2 .container h5, 
+            .section-theme--2 .container h6 { color: var(--color-gold-2) }
+            .section-theme--2 .container p,
+            .section-theme--2 .container ol,
+            .section-theme--2 .container ul { color: var(--color-gold-1) }
+
+            
+            .location-and-booking .container {
+                padding-bottom: 0;
+            }
+
+            .location-and-booking #hotel {
+                display: inline-block;
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+                margin-bottom: -0.75rem;
+            }
+
+            @media (min-width: 37.5rem) {
+                .location-and-booking #hotel { margin-bottom: -1rem }
+            }
+
+            @media (min-width: 80rem) {
+                .location-and-booking #hotel { margin-bottom: -1.125rem }
+            }
+
+            /* Cards -------------------------------------------------------- */
+
+            .cards {
+                display: grid;
+                gap: var(--space-small);
+                margin: var(--space-small) 0 0;
+                padding-left: 0;
+                list-style: none;
+            }
+
+            @media (min-width: 80rem) {
+                .cards {
+                    margin: var(--space-medium) 0 0;
+                    gap: var(--space-medium);
+                }
+                .cards--2 {
+                    grid-template-columns: 1fr 1fr;
+                }
+                .cards--3 {
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+            }
+
+            .cards-item {
+                border: 2px solid currentColor;
+                padding: var(--space-small);
+                border-radius: var(--radius-1);
+            }
+
+            @media (min-width: 37.5rem) {
+                .card-item { padding: var(--space-medium) }
+            }
+
+            @media (min-width: 80rem) {
+                .card-item { padding: var(--space-large) }
+            }
+
+            /* Continue ----------------------------------------------------- */
+
+            .continue {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: var(--space-medium);
+                margin: var(--space-small) 0;
+            }
+
+            @media (min-width: 37.5rem) {
+                .continue {
+                    margin: var(--space-medium) 0;
+                }
+            }
+
+            @media (min-width: 80rem) {
+                .continue {
+                    gap: var(--space-large);
+                    margin: var(--space-large) 0;
+                }
+            }
+
+            /* Footer ------------------------------------------------------- */
+
+            footer {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body id="top">
+        {# SVG symbols #}
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="star-large" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 60 60">
+                <path stroke="#D2A24F" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" stroke-width="2" d="M30.22 4v52.37M7 30.17h46.44M12.44 45.13l35.55-29.89M14.54 13.05 45.9 47.29"/>
+            </symbol>
+            <symbol id="star-medium" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 40 40">
+                <path stroke="#D2A24F" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" stroke-width="2" d="M20.3 3v34.58M4 20.3h32.6M7.82 30.16l24.96-19.73M9.3 8.98 31.32 31.6"/>
+            </symbol>
+            <symbol id="star-small" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 36 36">
+                <path stroke="#D2A24F" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" stroke-width="2" d="M18.15 3v29.64M5 17.81h26.29M8.51 8.89l19.27 17.88"/>
+            </symbol>
+        </svg>
+        {# Content #}
+        {{ content | safe }}
+    </body>
+    <script>
+        function removeLocationHash(){
+            var noHashURL = window.location.href.replace(/#.*$/, '');
+            window.history.replaceState('', document.title, noHashURL) 
+        }
+        window.addEventListener("popstate", function(event){
+            removeLocationHash();
+        });
+        window.addEventListener("hashchange", function(event){
+            event.preventDefault();
+            removeLocationHash();
+        });
+        window.addEventListener("load", function(){
+            removeLocationHash();
+        });
+    </script>
+</html>
