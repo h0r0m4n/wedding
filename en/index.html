@@ -243,19 +243,6 @@
                 .micro { font-size: 60% }
             }
 
-            .line {
-                display: inline-block;
-                content: '';
-                width: 2px;
-                height: 8rem;
-                background-color: var(--color-gold-2);
-                margin: var(--space-medium) auto;
-            }
-
-            @media (min-width: 50rem) {
-                .line { height: 10rem }
-            }
-
             /* Header ------------------------------------------------------- */
 
             header {
@@ -283,10 +270,6 @@
             }
 
             /* Nav ---------------------------------------------------------- */
-
-            @media (max-width: 49.3975rem) {
-                nav { margin-bottom: var(--space-large) }
-            }
 
             nav ul {
                 list-style: none;
@@ -450,6 +433,11 @@
                 }
             }
 
+            .continue svg {
+                width: inherit;
+                height: inherit;
+            }
+
             /* Footer ------------------------------------------------------- */
 
             footer {
@@ -500,7 +488,17 @@
         
         <p>Royal Marine Hotel</p>
     </address>
-    <div class="line"></div>
+    <div class="continue">
+    <svg width="60" height="60">
+        <use xlink:href="#star-large"/>
+    </svg>
+    <svg width="40" height="40">
+        <use xlink:href="#star-medium"/>
+    </svg>
+    <svg width="36" height="36">
+        <use xlink:href="#star-small"/>
+    </svg>
+</div>
     <nav>
         <ul>
             
@@ -523,18 +521,7 @@
     </nav>
 </header>
 <main>
-    <div class="continue">
-    <svg width="60" height="60">
-        <use xlink:href="#star-large"/>
-    </svg>
-    <svg width="40" height="40">
-        <use xlink:href="#star-medium"/>
-    </svg>
-    <svg width="36" height="36">
-        <use xlink:href="#star-small"/>
-    </svg>
-</div>
-<section id="welcome" class="welcome section section-theme--1">
+    <section id="welcome" class="welcome section section-theme--1">
     <div class="container">
         <div class="section-header">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 776 256" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
@@ -932,7 +919,7 @@
 </main>
 <footer>
     <div class="container">
-        <p class="small">© Elena &amp; Roman’s Wedding 2022. All rights reserved. Version v1.6.1. <a href="#top">Top</a></p>
+        <p class="small">© Elena &amp; Roman’s Wedding 2022. All rights reserved. Version v1.6.2. <a href="#top">Top</a></p>
         <p>&#10084;</p>
     </div>
 </footer>

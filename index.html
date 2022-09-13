@@ -243,19 +243,6 @@
                 .micro { font-size: 60% }
             }
 
-            .line {
-                display: inline-block;
-                content: '';
-                width: 2px;
-                height: 8rem;
-                background-color: var(--color-gold-2);
-                margin: var(--space-medium) auto;
-            }
-
-            @media (min-width: 50rem) {
-                .line { height: 10rem }
-            }
-
             /* Header ------------------------------------------------------- */
 
             header {
@@ -283,10 +270,6 @@
             }
 
             /* Nav ---------------------------------------------------------- */
-
-            @media (max-width: 49.3975rem) {
-                nav { margin-bottom: var(--space-large) }
-            }
 
             nav ul {
                 list-style: none;
@@ -448,6 +431,11 @@
                     gap: var(--space-large);
                     margin: var(--space-large) 0;
                 }
+            }
+
+            .continue svg {
+                width: inherit;
+                height: inherit;
             }
 
             /* Footer ------------------------------------------------------- */
