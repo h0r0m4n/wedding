@@ -216,6 +216,7 @@
                 margin-inline: auto;
                 max-width: 60rem;
                 padding: var(--space-small);
+                overflow: hidden;
             }
 
             @media (min-width: 37.5rem) {
@@ -271,6 +272,11 @@
 
             /* Nav ---------------------------------------------------------- */
 
+            nav .container {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+
             nav ul {
                 list-style: none;
                 margin: 0;
@@ -319,10 +325,14 @@
 
             .section-body .icon {
                 text-align: center;
-                margin: var(--space-medium) auto 0;
+                line-height: 0;
+                margin: var(--space-medium) auto var(--space-tiny);
             }
 
+            /* Theme 1 */
+
             .section-theme--1 .container {
+                color: var(--color-gold-3);
                 background-color: var(--color-pink);
                 border: 2px solid var(--color-gold-2);
             }
@@ -337,22 +347,35 @@
             .section-theme--1 .container h4,
             .section-theme--1 .container h5,
             .section-theme--1 .container h6 { color: var(--color-gold-2) }
-            .section-theme--1 .container p,
-            .section-theme--1 .container ol,
-            .section-theme--1 .container ul { color: var(--color-gold-3) }
 
-            .section-theme--2 .container { background-color: var(--color-blue) }
+            /* Theme 2 */
+
+            .section-theme--2 .container {
+                color: var(--color-gold-1);
+                background-color: var(--color-blue);
+            }
+
+            .section-theme--2 .container a { color: var(--color-gold-1) }
+
             .section-theme--2 .container h1,
             .section-theme--2 .container h2,
             .section-theme--2 .container h3,
             .section-theme--2 .container h4,
             .section-theme--2 .container h5, 
             .section-theme--2 .container h6 { color: var(--color-gold-2) }
-            .section-theme--2 .container p,
-            .section-theme--2 .container ol,
-            .section-theme--2 .container ul { color: var(--color-gold-1) }
 
-            
+            /* Theme 3 */
+
+            .section-theme--3 .container {
+                border: 2px solid var(--color-gold-3);
+            }
+
+            @media (min-width: 37.5rem) {
+                .section-theme--1 .container { border-width: 4px }
+            }
+
+            /* Location & Booking */
+
             .location-and-booking .container {
                 padding-bottom: 0;
             }
@@ -362,7 +385,7 @@
                 width: 100%;
                 max-width: 100%;
                 height: auto;
-                margin-bottom: -0.75rem;
+                margin-bottom: -0.625rem;
             }
 
             @media (min-width: 37.5rem) {
@@ -371,6 +394,22 @@
 
             @media (min-width: 80rem) {
                 .location-and-booking #hotel { margin-bottom: -1.125rem }
+            }
+
+            /* Wedding Agenda */
+
+            .wedding-agenda { text-align: center }
+
+            .wedding-agenda dt {
+                margin-top: var(--space-medium);
+                margin-bottom: var(--space-tiny);
+            }
+
+            .wedding-agenda p { margin-top: 0 }
+
+            .wedding-agenda time {
+                display: block;
+                font-size: 0.75em;
             }
 
             /* Cards -------------------------------------------------------- */
@@ -500,24 +539,29 @@
     </svg>
 </div>
     <nav>
-        <ul>
-            
-                <li>
-                    <a href="#benvenuti">Benvenuti</a>
-                </li>
-                <li>
-                    <a href="#abbigliamento">Abbigliamento</a>
-                </li>
-                <li>
-                    <a href="#luogo-and-prenotazioni">Luogo &amp; Prenotazioni</a>
-                </li>
-                <li>
-                    <a href="#raccomandazione-regalo">Raccomandazione regalo</a>
-                </li>
-                <li>
-                    <a href="#contatti">Contatti</a>
-                </li>
-        </ul>
+        <div class="container">
+            <ul>
+                
+                    <li>
+                        <a href="#benvenuti">Benvenuti</a>
+                    </li>
+                    <li>
+                        <a href="#abbigliamento">Abbigliamento</a>
+                    </li>
+                    <li>
+                        <a href="#agenda-del-matrimonio">Agenda del Matrimonio</a>
+                    </li>
+                    <li>
+                        <a href="#luogo-and-prenotazioni">Luogo &amp; Prenotazioni</a>
+                    </li>
+                    <li>
+                        <a href="#raccomandazione-regalo">Raccomandazione regalo</a>
+                    </li>
+                    <li>
+                        <a href="#contatti">Contatti</a>
+                    </li>
+            </ul>
+        </div>
     </nav>
 </header>
 <main>
@@ -685,7 +729,169 @@
         <use xlink:href="#star-small"/>
     </svg>
 </div>
-<section id="luogo-and-prenotazioni" class="location-and-booking section section-theme--1">
+<section id="agenda-del-matrimonio" class="wedding-agenda section section-theme--1">
+    <div class="container">
+        <div class="section-header">
+            <svg width="776" height="256" viewBox="0 0 776 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M319.427 21.3324L323.301 18.8712C325.225 17.649 327.457 17 329.736 17H349.987C352.266 17 354.498 17.649 356.422 18.8712L360.296 21.3324M319.427 21.3324L314.986 24.1535C313.431 25.1417 312.178 26.5407 311.368 28.1959L280 92.2457L292.576 99.4993L314.032 64.0186L315.412 82.3299L309.905 122.322H316.421M319.427 21.3324L341.444 82.8636L360.296 21.3324M360.296 21.3324L364.95 24.2892C366.371 25.1916 367.541 26.438 368.351 27.9128L403.714 92.2457L390.441 99.4993L368.694 64.0186L368.301 82.3299L372.811 122.322H366.618M316.421 122.322H335.311L341.444 114.799L347.576 122.322H366.618M316.421 122.322V234.786H331.699L341.358 132.204L352.015 234.786H366.618V122.322M341.358 89.3495V91.2303M341.358 102.074V103.955M420.176 83.4171H467.067M420.176 83.4171V102.789M420.176 83.4171C420.176 83.4171 410.311 60.0009 410.697 44.1203C410.934 34.4165 415.187 19.7674 415.187 19.7674H431.649V37.0738C431.649 39.4769 432.514 41.7996 434.087 43.6169L443.621 54.6364L453.156 43.6169C454.728 41.7996 455.594 39.4769 455.594 37.0738V19.7674H471.557C471.557 19.7674 476.615 34.3287 477.044 44.1203C477.741 60.0452 467.067 83.4171 467.067 83.4171M467.067 83.4171V102.789M467.067 102.789H420.176M467.067 102.789C467.067 102.789 495.897 154.078 496 229.206C496 229.47 495.95 229.731 495.817 229.959C494.993 231.378 491.029 236.802 477.044 240.478M420.176 102.789C410.713 114.761 391.803 152.81 391.741 229.236C391.741 229.479 391.784 229.724 391.9 229.938C392.649 231.322 396.392 236.783 410.321 240.478M443.621 244V183.671M443.621 244C458.577 244 469.333 242.504 477.044 240.478M443.621 244C428.666 244 417.961 242.504 410.321 240.478M477.044 240.478L467.566 184.225M410.321 240.478L419.677 184.225" stroke="#D2A24F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M610.308 67V101.584" stroke="#D2A24F" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M594 84.2969L626.608 84.2906" stroke="#D2A24F" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M597.824 94.1636L622.782 74.4267" stroke="#D2A24F" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M599.295 72.9829L621.319 95.5995" stroke="#D2A24F" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M605.219 142V194.371" stroke="#D2A24F" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M582 168.175L628.442 168.165" stroke="#D2A24F" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M587.44 183.132L622.987 153.244" stroke="#D2A24F" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M589.539 151.046L620.906 185.294" stroke="#D2A24F" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M145.219 133V185.371" stroke="#D2A24F" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M122 159.175L168.442 159.165" stroke="#D2A24F" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M127.44 174.132L162.987 144.244" stroke="#D2A24F" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M129.539 142.046L160.906 176.294" stroke="#D2A24F" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M557.148 105V134.644" stroke="#D2A24F" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M544 119.812L570.288 119.807" stroke="#D2A24F" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M547.51 110.886L566.78 128.767" stroke="#D2A24F" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M236.148 152V181.644" stroke="#D2A24F" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M223 166.812L249.288 166.807" stroke="#D2A24F" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M226.51 157.886L245.78 175.767" stroke="#D2A24F" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M198.308 207V241.584" stroke="#D2A24F" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M182 224.297L214.608 224.291" stroke="#D2A24F" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M185.824 234.164L210.782 214.427" stroke="#D2A24F" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M187.295 212.983L209.319 235.6" stroke="#D2A24F" stroke-width="2" stroke-miterlimit="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+            <h2>Agenda del Matrimonio</h2>
+        </div>
+        <div class="section-body">
+            
+                <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none">
+  <path stroke="#D2A24F" stroke-linejoin="round" stroke-width="2" d="M13 12.5 18 31l5-18.5m-10 0a7.666 7.666 0 0 0-6.5 7.576V35l4.5 2.5L14 60h8l3-22.5 4.5-2.5V20.076A7.666 7.666 0 0 0 23 12.5m-10 0 5-1.5m-5 1.5V8l5 3m5 1.5L18 11m5 1.5V8l-5 3m22.582 11.86h10.855m-10.855 0v4.524m0-4.523s-2.284-5.467-2.194-9.175C38.443 11.42 39.428 8 39.428 8h3.81v1.21a10 10 0 0 0 2.41 6.51l.361.421.362-.421a10 10 0 0 0 2.41-6.51V8h3.695s1.17 3.4 1.27 5.686c.161 3.718-2.31 9.175-2.31 9.175m0 0v4.523m0 0H40.583m10.855 0s6.596 11.836 6.696 29.21c.001.262-.051.526-.214.73-.406.51-1.496 1.498-4.173 2.208M40.582 27.383c-2.179 2.78-6.521 11.585-6.581 29.24-.001.242.043.488.188.681.375.502 1.425 1.508 4.112 2.227m7.708.822V46.268m0 14.086c3.462 0 5.952-.35 7.737-.822m-7.737.822c-3.462 0-5.94-.35-7.708-.822m15.445 0-2.194-13.134M38.301 59.53l2.166-13.133"/>
+</svg>
+                </figure>
+                <time datetime="10:30">10:30</time>
+                <h3>Arrivo degli ospiti</h3>
+                <p>Tutti gli ospiti sono richiesti di presentarsi sul luogo. Troverete la stanza della cerimonia <b>Kingstown</b> al 3o piano.</p>
+
+                <hr>
+
+                <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none">
+  <path stroke="#D2A24F" stroke-linejoin="round" stroke-width="2" d="M22.5 19C13.387 19 6 26.387 6 35.5S13.387 52 22.5 52 39 44.613 39 35.5 31.613 19 22.5 19Zm0 0 9-6-3-4.5h-12l-3 4.5 9 6ZM58 42.5C58 51.613 50.613 59 41.5 59S25 51.613 25 42.5 32.387 26 41.5 26 58 33.387 58 42.5Z"/>
+</svg>
+                </figure>
+                <time datetime="11:00">11:00</time>
+                <h3>La cerimonia avrà inizio</h3>
+
+                <hr>
+
+                <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none">
+  <path stroke="#D2A24F" stroke-width="2" d="M18.5 51H12a4 4 0 0 1-4-4V25a4 4 0 0 1 4-4h1.25m5.25 30V21m0 30H52a4 4 0 0 0 4-4V25a4 4 0 0 0-4-4h-2.292a4 4 0 0 1-3.714-2.514l-.988-2.472a4 4 0 0 0-3.714-2.514H30.708a4 4 0 0 0-3.714 2.514l-.988 2.472A4 4 0 0 1 22.292 21h-.542m-3.25 0h-5.25m5.25 0h3.25m-8.5 0v-2a3 3 0 0 1 3-3h2.5a3 3 0 0 1 3 3v2M39 34a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm7 0c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10 10 4.477 10 10Z"/>
+</svg>
+                </figure>
+                <time datetime="11:30">11:30/11:45</time>
+                <h3>Fotografie</h3>
+                <p>Gli invitati scatteranno delle foto con la sposa e lo sposo.</p>
+
+                <hr>
+
+                <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none">
+  <path stroke="#D2A24F" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M36 51V38m0 13 11.5 5.5h-23L36 51Zm0-13-9.5-11.339M36 38l9.5-11.339m-25-7.161h31l-6 7.161m-25-7.161 6 7.161m-6-7.161L25 15m-4.5 4.5-3.5 4m3.5-4-1-6m1 6-5.5-2m11.5 9.161h19m-13.505-7.305c.003-.118.005-.237.005-.356 0-6.627-5.373-12-12-12S8 12.373 8 19s5.373 12 12 12c2.97 0 5.687-1.079 7.783-2.866"/>
+</svg>
+                </figure>
+                <time datetime="12:00">12:00</time>
+                <h3>Rinfresco</h3>
+                <p>Gli invitati avranno del tempo per godersi un leggero rinfresco con tè e confetti italiani nella <b>Martello Lounge</b>.</p>
+                
+                <hr>
+
+                <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none">
+  <path stroke="#D2A24F" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m26 6 5 2 .355 12.082a10 10 0 0 1-3.663 8.034L26 29.5l.47 6.819a83.002 83.002 0 0 1-.362 15.328l-.671 5.752A1.81 1.81 0 0 1 23.638 59v0a1.81 1.81 0 0 1-1.801-1.63l-.64-6.394a82.989 82.989 0 0 1-.215-13.97L21.5 29.5l-1.692-1.384a10 10 0 0 1-3.663-8.034L16.5 8l5-2M26 6v12.5M26 6h-4.5m0 0v12.5M38 7l2.642 2.182a16 16 0 0 1 4.755 18.05l-.83 2.171a19.999 19.999 0 0 0-1.275 8.473l.882 13.23a8.648 8.648 0 0 1-3.707 7.686c-1.042.722-2.467-.025-2.467-1.293V7Z"/>
+</svg>
+                </figure>
+                <time datetime="13:00">13:00</time>
+                <h3>Il pranzo avrà inizio nella Martello Suite</h3>
+                <p>Annuncio importante per gli italiani: la pasta non verrà servita 😱. Per favore venite con uno spirito di avventura e divertitevi alla scoperta di nuovi piatti.</p>
+
+                <hr>
+
+                <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none">
+  <path stroke="#D2A24F" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m34.527 6.225 2.966 3.369m0 0 2.967 3.369m-2.967-3.37 4.01-.54m-4.01.54 1.044-3.908m-1.044 3.909-4.01.54m4.01-.54-1.043 3.91m-3.137 45.692c.378-5.078-8.731-4.009-8.014-9.102.717-5.094 9.894-4.25 10.611-9.343.717-5.093-9.072-4.015-8.014-9.102.926-4.45 8.31-1.258 9.285-8.175M53 19.742l.842-.742m-.315 11.225 2.966 3.369m0 0 2.966 3.369m-2.966-3.37 4.01-.54m-4.01.54 1.044-3.908m-1.044 3.909-4.01.54m4.01-.54-1.044 3.91M41.858 56.571c-.027-3.976.884-9.613 7.6-15.676m3.411 17.576 1.104-.202M17.053 28l.742.842M6.527 37.225l2.966 3.369m0 0 2.966 3.369m-2.966-3.37 4.01-.54m-4.01.54 1.044-3.908m-1.044 3.909-4.01.54m4.01-.54-1.043 3.91m9.06 14.223c-.97-.939-2.966-3.74-3.2-7.433"/>
+</svg>
+                </figure>
+                <time datetime="15:00">15:00</time>
+                <h3>Intrattenimento</h3>
+                <p>Gli invitati parteciperanno attivamente ad un intrattenimento a sorpresa condotto ai loro tavoli.</p>
+
+                <hr>
+
+                <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none">
+  <path stroke="#D2A24F" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 39V21a1 1 0 0 1 1-1v0m-1 19h8m-8 0h-4m30 0V21a1 1 0 0 0-1-1v0m1 19h-7.5m7.5 0h4.5M27 39l.356 1.566c1.166 5.132 8.45 5.21 9.726.105L37.5 39M27 39h10.5M27 39l-1.528 3.056c-1.843 3.685-7.102 3.685-8.944 0L15 39m22.5 0 1.73 3.195c1.964 3.625 7.225 3.45 8.942-.298L49.5 39M32 20l-1.133 2.718c-1.588 3.813-6.852 4.164-8.934.596L20 20m12 0 1.328 2.897c1.717 3.748 6.978 3.923 8.941.298L44 20m-12 0h12m-12 0H20m-5 19v0a3 3 0 0 0-3 3v16h40V41.5a2.5 2.5 0 0 0-2.5-2.5v0M25.258 8.063c2.421-4.735 6.677.402 6.677.402s3.644-4.948 6.643-.823C40.995 10.965 32.234 19 32.234 19s-8.837-7.298-6.977-10.937Z"/>
+</svg>
+                </figure>
+                <time datetime="16:00">16:00</time>
+                <h3>Un rinfresco accogliente e divertente</h3>
+                    
+                <hr>
+            
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none">
+  <path stroke="#D2A24F" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M35.944 48.487H28.31m7.633 0c3.12-5.154 5.415-8.527 6.997-12.859m-6.997 12.859v5.256m-7.633-5.256c-3.183-5.134-5.437-8.515-6.966-12.859m6.966 12.859v5.256M18.77 11.735h26.715m-26.715 0L14.953 10.3m3.817 1.434c-.476 9.894.094 16.843 2.575 23.893m24.14-23.893L49.3 10.3m-3.816 1.434c.713 9.953.023 16.868-2.544 23.893m6.36-25.327-.853-1.923A4 4 0 0 0 44.79 6H19.463a4 4 0 0 0-3.657 2.378l-.853 1.923m34.348 0C60.086 6 66.5 26 42.94 35.628M14.953 10.301C4.825 4-3.563 25 21.345 35.628m14.599 18.115h4.77c2.635 0 4.77 2.14 4.77 4.78V59H18.77v-.478a4.775 4.775 0 0 1 4.77-4.779h4.77m7.634 0H28.31"/>
+</svg>
+                <time datetime="17:00">17:00</time>
+                <h3>Premiazione</h3>
+                <p>I vincitori verranno selezionati da una giuria e premiati.</p>
+
+                <hr>
+
+                <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none">
+  <path stroke="#D2A24F" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30.5 34.5C26.9 46.1 14 51.333 8 52.5c-.5 6 7.5 7 11 5 5.7 3.206 8.46 3.124 13 0 4.94 3.64 7.802 2.93 13 0 0 0 9 4 11-2.5-1.317-.878-4.24-4.1-7.5-7.976M30.5 34.5l-3-3.5-3.5 6.5-7 3.5c-2 0-3.5-2-2.5-4l5.5-3 4.5-7.5 6.5-3.25m-.5 11.25c2.4.4 5.333-1.167 6.5-2m0 0-.5-5.5H43l3.5-.618M37 32.5c2.618 3.553 7.334 9.571 11.5 14.524M31 23.25l3.5-1.75H43l6-.75m-18 2.5L32 18l13-2.5 4 5.25m0 0 2-.25c1.705.284 2.602 1.537 2.509 2.75M46.5 26.382l5-.882c1.295-.432 1.938-1.33 2.009-2.25M46.5 26.382c-.256.464-.57 1.16-.847 1.934M48.5 47.024c0-.675.12-2.627 0-5.024-.08-1.621-3.07-6.85-3.5-10-.138-1.006.21-2.445.653-3.684m0 0c1.955 2.728 6.263 5.534 7.856-5.066M27 17a4 4 0 1 1-8 0 4 4 0 0 1 8 0Zm11-9a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z"/>
+</svg>
+                </figure>
+                <time datetime="17:30">17:30</time>
+                <h3>Primo ballo</h3>
+                <p>Gli sposi inizieranno le danze, seguiti dagli invitate che desiderano unirsi.</p>
+                    
+                <hr>
+
+                <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none">
+  <path stroke="#D2A24F" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22 14a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm0 0v13.5m-6 25V46h12v6.5m-12 0V59h12v-6.5m-12 0h12M58 56l-4 3H10l-4-3m30-3.5V46h12v6.5m-12 0V59h12v-6.5m-12 0h12M42 18a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm0 0v10.5M17 34h11l-8-8-3 8Zm7 2.536c1.435.828 1.703 3.05.598 4.964-1.105 1.913-3.163 2.792-4.598 1.964-1.435-.828-1.703-3.05-.598-4.964 1.104-1.913 3.163-2.792 4.598-1.964Zm21.947 2.818c.268 1.635-1.282 3.25-3.462 3.607-2.18.357-4.165-.68-4.432-2.315-.268-1.635 1.282-3.25 3.462-3.607 2.18-.357 4.165.68 4.432 2.315ZM37 34h11l-7-7-4 7Z"/>
+</svg>
+                </figure>
+                <time datetime="19:00">19:00</time>
+                <h3>Cena leggera</h3>
+                <p>Verranno serviti degli spuntini.</p>
+
+                <hr>
+                        
+                <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="none">
+  <path stroke="#D2A24F" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 25.5H4V56h56V25.5h-4m-47.5 0 20.901-14M8.5 25.5H56m-26.599-14a2.999 2.999 0 0 0 5.099.159m-5.099-.159a3 3 0 1 1 5.099.159m0 0L56 25.5m-40 12-.58-.695a2.5 2.5 0 0 0-4.42 1.6v5.56a2.5 2.5 0 0 0 4.268 1.767L16 45m5-9.5v8a3 3 0 0 0 3 3h1M38.5 45l1.08.9a3 3 0 0 0 3.84 0l.204-.17a2.435 2.435 0 0 0-.918-4.22l-1.742-.474A2.665 2.665 0 0 1 39 38.465v-.06a2.5 2.5 0 0 1 4.42-1.6l.58.695m9.5 9H52a3 3 0 0 1-3-3V41m4.5-5.5H52a3 3 0 0 0-3 3V41m0 0h3m-18 2.965v-5.93a2.5 2.5 0 0 0-5 0v5.93a2.5 2.5 0 0 0 5 0Z"/>
+</svg>
+                </figure>
+                <time datetime="21:00">21:00</time>
+                <h3>La festa è finita!</h3>
+                <p>Grazie per aver partecipato a questo giorno così importante per noi. A presto. Tuttavia, per chi piace stare alzato fino a tardi, è possibile avvalersi del bar notturno fino all’ 01:30 (Questo non è incluso).</p>
+            
+        </div>
+    </div>
+</section>
+<div class="continue">
+    <svg width="60" height="60">
+        <use xlink:href="#star-large"/>
+    </svg>
+    <svg width="40" height="40">
+        <use xlink:href="#star-medium"/>
+    </svg>
+    <svg width="36" height="36">
+        <use xlink:href="#star-small"/>
+    </svg>
+</div>
+<section id="luogo-and-prenotazioni" class="location-and-booking section section-theme--2">
     <div class="container">
         <div class="section-header">
             
@@ -778,7 +984,7 @@
         <use xlink:href="#star-small"/>
     </svg>
 </div>
-<section id="raccomandazione-regalo" class="gift-recommendation section section-theme--2">
+<section id="raccomandazione-regalo" class="gift-recommendation section section-theme--1">
     <div class="container">
         <div class="section-header">
             <svg width="776" height="256" viewBox="0 0 776 256" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -819,34 +1025,30 @@
         <div class="section-body">
             <ul>
                 
-                    <li>
-                        <p>Come tutti, anche noi abbiamo molti sogni. Il primo che vorremmo realizzare come una famiglia è quello di avere una casa tutta nostra dove crescere il nostro amore ed invitarvi a passare del tempo piacevole con noi. Sentitevi liberi di contribuire nel modo che più vi aggrada:</p>
-                        <ul class="cards cards--2">
-                            <li class="cards-item">
-                                <dl>
-                                    <dt class="label">Beneficiario</dt>
-                                    <dd>Elena Loiotile</dd>
-                                    <dt class="label">IBAN</dt>
-                                    <dd><code>IE13AIBK93104771203013</code></dd>
-                                    <dt class="label">BIC</dt>
-                                    <dd><code>AIBKIE2D</code></dd>
-                                </dl>
-                            </li>
-                            <li class="cards-item">
-                                <dl>
-                                    <dt class="label">Beneficiario</dt>
-                                    <dd>Roman Horokhovatskyy</dd>
-                                    <dt class="label">IBAN</dt>
-                                    <dd><code>IE94BOFI90001790707666</code></dd>
-                                    <dt class="label">BIC</dt>
-                                    <dd><code>BOFIIE2DXXX</code></dd>
-                                </dl>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <p>Porta con te al matrimonio in una busta da lettere un ricordo che hai con noi o con uno di noi. Lo leggeremo in privato.</p>
-                    </li>
+                    <p>Come tutti, anche noi abbiamo molti sogni. Il primo che vorremmo realizzare come una famiglia è quello di avere una casa tutta nostra dove crescere il nostro amore ed invitarvi a passare del tempo piacevole con noi. Sentitevi liberi di contribuire nel modo che più vi aggrada:</p>
+                    <ul class="cards cards--2">
+                        <li class="cards-item">
+                            <dl>
+                                <dt class="label">Beneficiario</dt>
+                                <dd>Elena Loiotile</dd>
+                                <dt class="label">IBAN</dt>
+                                <dd><code>IE13AIBK93104771203013</code></dd>
+                                <dt class="label">BIC</dt>
+                                <dd><code>AIBKIE2D</code></dd>
+                            </dl>
+                        </li>
+                        <li class="cards-item">
+                            <dl>
+                                <dt class="label">Beneficiario</dt>
+                                <dd>Roman Horokhovatskyy</dd>
+                                <dt class="label">IBAN</dt>
+                                <dd><code>IE94BOFI90001790707666</code></dd>
+                                <dt class="label">BIC</dt>
+                                <dd><code>BOFIIE2DXXX</code></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    <p>Porta con te al matrimonio in una busta da lettere un ricordo che hai con noi o con uno di noi. Lo leggeremo in privato.</p>
                 
             </ul>
         </div>
@@ -863,7 +1065,7 @@
         <use xlink:href="#star-small"/>
     </svg>
 </div>
-<section id="contatti" class="contacts section section-theme--1">
+<section id="contatti" class="contacts section section-theme--2">
     <div class="container">
         <div class="section-header">
             
@@ -917,7 +1119,7 @@
 </main>
 <footer>
     <div class="container">
-        <p class="small">© Il matrimonio di Elena &amp; Roman 2022. Tutti i diritti riservati. Versione v1.6.2. <a href="#top">Torna all’inizio</a></p>
+        <p class="small">© Il matrimonio di Elena &amp; Roman 2022. Tutti i diritti riservati. Versione v1.7.0. <a href="#top">Torna all’inizio</a></p>
         <p>&#10084;</p>
     </div>
 </footer>
