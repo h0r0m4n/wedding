@@ -1,0 +1,197 @@
+<section id="{{ site.sections.agenda[locale] | slugify }}" class="{{ site.sections.agenda.en | slugify }} section section-theme--1">
+    <div class="container">
+        <div class="section-header">
+            {% include 'svgs/dress-code.svg' %}
+            <h2>{{ site.sections.agenda[locale] }}</h2>
+        </div>
+        <div class="section-body">
+            {% if locale == 'it' %}
+                <figure class="icon">
+                    {% include 'svgs/guests.svg' %}
+                </figure>
+                <time datetime="10:30">10:30</time>
+                <h3>Arrivo degli ospiti</h3>
+                <p>Tutti gli ospiti sono richiesti di presentarsi sul luogo. Troverete la stanza della cerimonia <b>Kingstown</b> al 3o piano.</p>
+
+                <hr>
+
+                <figure class="icon">
+                    {% include 'svgs/ceremony.svg' %}
+                </figure>
+                <time datetime="11:00">11:00</time>
+                <h3>La cerimonia avrà inizio</h3>
+
+                <hr>
+
+                <figure class="icon">
+                    {% include 'svgs/photos.svg' %}
+                </figure>
+                <time datetime="11:30">11:30/11:45</time>
+                <h3>Fotografie</h3>
+                <p>Gli invitati scatteranno delle foto con la sposa e lo sposo.</p>
+
+                <hr>
+
+                <figure class="icon">
+                    {% include 'svgs/refreshment-1.svg' %}
+                </figure>
+                <time datetime="12:00">12:00</time>
+                <h3>Rinfresco</h3>
+                <p>Gli invitati avranno del tempo per godersi un leggero rinfresco con tè e confetti italiani nella <b>Martello Lounge</b>.</p>
+                
+                <hr>
+
+                <figure class="icon">
+                    {% include 'svgs/lunch.svg' %}
+                </figure>
+                <time datetime="13:00">13:00</time>
+                <h3>Il pranzo avrà inizio nella Martello Suite</h3>
+                <p>Annuncio importante per gli italiani: la pasta non verrà servita 😱. Per favore venite con uno spirito di avventura e divertitevi alla scoperta di nuovi piatti.</p>
+
+                <hr>
+
+                <figure class="icon">
+                    {% include 'svgs/entertainment.svg' %}
+                </figure>
+                <time datetime="15:00">15:00</time>
+                <h3>Intrattenimento</h3>
+                <p>Gli invitati parteciperanno attivamente ad un intrattenimento a sorpresa condotto ai loro tavoli.</p>
+
+                <hr>
+
+                <figure class="icon">
+                    {% include 'svgs/refreshment-2.svg' %}
+                </figure>
+                <time datetime="16:00">16:00</time>
+                <h3>Un rinfresco accogliente e divertente</h3>
+                    
+                <hr>
+            
+                {% include 'svgs/awards.svg' %}
+                <time datetime="17:00">17:00</time>
+                <h3>Premiazione</h3>
+                <p>I vincitori verranno selezionati da una giuria e premiati.</p>
+
+                <hr>
+
+                <figure class="icon">
+                    {% include 'svgs/dance.svg' %}
+                </figure>
+                <time datetime="17:30">17:30</time>
+                <h3>Primo ballo</h3>
+                <p>Gli sposi inizieranno le danze, seguiti dagli invitate che desiderano unirsi.</p>
+                    
+                <hr>
+
+                <figure class="icon">
+                    {% include 'svgs/refreshment-3.svg' %}
+                </figure>
+                <time datetime="19:00">19:00</time>
+                <h3>Cena leggera</h3>
+                <p>Verranno serviti degli spuntini.</p>
+
+                <hr>
+                        
+                <figure class="icon">
+                    {% include 'svgs/closing.svg' %}
+                </figure>
+                <time datetime="21:00">21:00</time>
+                <h3>La festa è finita!</h3>
+                <p>Grazie per aver partecipato a questo giorno così importante per noi. A presto. Tuttavia, per chi piace stare alzato fino a tardi, è possibile avvalersi del bar notturno fino all’ 01:30 (Questo non è incluso).</p>
+            {% else %}
+                <figure class="icon">
+                    {% include 'svgs/guests.svg' %}
+                </figure>
+                <time datetime="10:30">10:30 am</time>
+                <h3>Guests arrival</h3>
+                <p>All the guests should be ready at the venue. Please, find the ceremony room <b>Kingstown</b> on the 3rd floor.</p>
+
+                <hr>
+
+                <figure class="icon">
+                    {% include 'svgs/ceremony.svg' %}
+                </figure>
+                <time datetime="11:00">11:00 am</time>
+                <h3>The ceremony will begin</h3>
+
+                <hr>
+
+                <figure class="icon">
+                    {% include 'svgs/photos.svg' %}
+                </figure>
+                <time datetime="11:30">11:30/11:45 am</time>
+                <h3>Pictures</h3>
+                <p>Guests will take pictures with the bride and groom.</p>
+
+                <hr>
+
+                <figure class="icon">
+                    {% include 'svgs/refreshment-1.svg' %}
+                </figure>
+                <time datetime="12:00">12:00 pm</time>
+                <h3>Arrival Reception</h3>
+                <p>Guests will have some time to enjoy a reception with tea and Italian wedding candies at the <b>Martello Lounge</b>.</p>
+                
+                <hr>
+
+                <figure class="icon">
+                    {% include 'svgs/lunch.svg' %}
+                </figure>
+                <time datetime="13:00">01:00 pm</time>
+                <h3>Lunch will begin at the Martello Suite</h3>
+                <p>Important announcement for Italians: pasta will not be served 😱. Please come with an adventurous spirit, and enjoy the discovery of new dishes.</p>
+
+                <hr>
+
+                <figure class="icon">
+                    {% include 'svgs/entertainment.svg' %}
+                </figure>
+                <time datetime="15:00">03:00 pm</time>
+                <h3>Entertainment</h3>
+                <p>Guests will actively participate in an entertainment surprise conducted at their table.</p>
+
+                <hr>
+
+                <figure class="icon">
+                    {% include 'svgs/refreshment-2.svg' %}
+                </figure>
+                <time datetime="16:00">04:00 pm</time>
+                <h3>Cosy and fun refreshment</h3>
+                      
+                <hr>
+            
+                {% include 'svgs/awards.svg' %}
+                <time datetime="17:00">05:00 pm</time>
+                <h3>Award ceremony</h3>
+                <p>Winners will be selected from two judges and presented with an award.</p>
+
+                <hr>
+
+                <figure class="icon">
+                    {% include 'svgs/dance.svg' %}
+                </figure>
+                <time datetime="17:30">05:30 pm</time>
+                <h3>First Dance</h3>
+                <p>The spouses will start the dance, followed by the guests who wish to.</p>
+                    
+                <hr>
+
+                <figure class="icon">
+                    {% include 'svgs/refreshment-3.svg' %}
+                </figure>
+                <time datetime="19:00">07:00 pm</time>
+                <h3>Light dinner</h3>
+                <p>Finger food will be provided.</p>
+
+                <hr>
+                        
+                <figure class="icon">
+                    {% include 'svgs/closing.svg' %}
+                </figure>
+                <time datetime="21:00">09:00 pm</time>
+                <h3>Party is over!</h3>
+                <p>Thank you for attending our special day. See you soon. However, if you are a night owl, you can avail of the late bar until 01:30 (this is not complimentary).</p>
+            {% endif %}
+        </div>
+    </div>
+</section>
