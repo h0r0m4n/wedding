@@ -216,6 +216,7 @@
                 margin-inline: auto;
                 max-width: 60rem;
                 padding: var(--space-small);
+                overflow: hidden;
             }
 
             @media (min-width: 37.5rem) {
@@ -271,6 +272,11 @@
 
             /* Nav ---------------------------------------------------------- */
 
+            nav .container {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+
             nav ul {
                 list-style: none;
                 margin: 0;
@@ -319,10 +325,14 @@
 
             .section-body .icon {
                 text-align: center;
-                margin: var(--space-medium) auto 0;
+                line-height: 0;
+                margin: var(--space-medium) auto var(--space-tiny);
             }
 
+            /* Theme 1 */
+
             .section-theme--1 .container {
+                color: var(--color-gold-3);
                 background-color: var(--color-pink);
                 border: 2px solid var(--color-gold-2);
             }
@@ -337,22 +347,35 @@
             .section-theme--1 .container h4,
             .section-theme--1 .container h5,
             .section-theme--1 .container h6 { color: var(--color-gold-2) }
-            .section-theme--1 .container p,
-            .section-theme--1 .container ol,
-            .section-theme--1 .container ul { color: var(--color-gold-3) }
 
-            .section-theme--2 .container { background-color: var(--color-blue) }
+            /* Theme 2 */
+
+            .section-theme--2 .container {
+                color: var(--color-gold-1);
+                background-color: var(--color-blue);
+            }
+
+            .section-theme--2 .container a { color: var(--color-gold-1) }
+
             .section-theme--2 .container h1,
             .section-theme--2 .container h2,
             .section-theme--2 .container h3,
             .section-theme--2 .container h4,
             .section-theme--2 .container h5, 
             .section-theme--2 .container h6 { color: var(--color-gold-2) }
-            .section-theme--2 .container p,
-            .section-theme--2 .container ol,
-            .section-theme--2 .container ul { color: var(--color-gold-1) }
 
-            
+            /* Theme 3 */
+
+            .section-theme--3 .container {
+                border: 2px solid var(--color-gold-3);
+            }
+
+            @media (min-width: 37.5rem) {
+                .section-theme--1 .container { border-width: 4px }
+            }
+
+            /* Location & Booking */
+
             .location-and-booking .container {
                 padding-bottom: 0;
             }
@@ -362,7 +385,7 @@
                 width: 100%;
                 max-width: 100%;
                 height: auto;
-                margin-bottom: -0.75rem;
+                margin-bottom: -0.625rem;
             }
 
             @media (min-width: 37.5rem) {
@@ -371,6 +394,22 @@
 
             @media (min-width: 80rem) {
                 .location-and-booking #hotel { margin-bottom: -1.125rem }
+            }
+
+            /* Wedding Agenda */
+
+            .wedding-agenda { text-align: center }
+
+            .wedding-agenda dt {
+                margin-top: var(--space-medium);
+                margin-bottom: var(--space-tiny);
+            }
+
+            .wedding-agenda p { margin-top: 0 }
+
+            .wedding-agenda time {
+                display: block;
+                font-size: 0.75em;
             }
 
             /* Cards -------------------------------------------------------- */

@@ -16,6 +16,10 @@
             "en": "Dress code",
             "it": "Abbigliamento"
         },
+        "agenda": {
+            "en": "Wedding Agenda",
+            "it": "Agenda del Matrimonio"
+        },
         "location_and_booking": {
             "en": "Location & Booking",
             "it": "Luogo & Prenotazioni"
@@ -41,7 +45,7 @@
         "en": "Top",
         "it": "Torna all’inizio"
     },
-    "version": "1.6.2",
+    "version": "1.7.0",
     "url": "https://wedding.horoman.com",
     "author": "Roman & Elena"
 }
