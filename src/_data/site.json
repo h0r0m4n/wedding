@@ -16,6 +16,10 @@
             "en": "Marriage Vows",
             "it": "Promesse di Matrimonio"
         },
+        "media": {
+            "en": "Photos & Videos",
+            "it": "Foto e Video"
+        },
         "dresscode": {
             "en": "Dress code",
             "it": "Abbigliamento"
@@ -26,7 +30,7 @@
         },
         "location_and_booking": {
             "en": "Location & Booking",
-            "it": "Luogo & Prenotazioni"
+            "it": "Luogo e Prenotazioni"
         },
         "gifts": {
             "en": "Gift Recommendation",
@@ -49,7 +53,7 @@
         "en": "Top",
         "it": "Torna all’inizio"
     },
-    "version": "1.9",
+    "version": "2.0",
     "url": "https://wedding.horoman.com",
     "author": "Roman & Elena"
 }
