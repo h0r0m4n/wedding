@@ -1,0 +1,33 @@
+<section id="{{ site.sections.vows[locale] | slugify }}" class="{{ site.sections.vows.en | slugify }} section section-theme--2">
+    <div class="container">
+        <div class="section-header">
+            {% include 'svgs/vows.svg' %}
+            <h2>{{ site.sections.vows[locale] }}</h2>
+        </div>
+        <div class="section-body">
+            {% if locale == 'it' %}
+                <figure class="icon">
+                    {% include 'svgs/elena.svg' %}
+                </figure>
+                <h3>Elena</h3>
+                <p>In questo giorno io, Elena, giuro a te, Roman, di essere sempre le tue ali per portarti in alto quando starai per cadere, ma anche per portarti ben oltre le stelle dove la felicità è solo nostra. Prometto di amarti, rispettarti e sostenerti per tutti gli anni avvenire. Sempre motivati dall'intenzione di rendere la nostra vita un'entusiasmante opera d'arte, vissuta pienamente l'uno nelle braccia dell'altra. Se le nostre anime si separeranno, faccio oggi un voto eterno di trovare la strada verso te e stare insieme nuovamente e per sempre.</p>
+                <figure class="icon">
+                    {% include 'svgs/roman.svg' %}
+                </figure>
+                <h3>Roman</h3>
+                <p>Elena, ti amo, micetta. Oggi mi dono a te in matrimonio. Prometto di incoraggiarti e ispirarti, di ridere con te e di confortarti nei momenti di dolore e lotta. C'è solo una vita davanti a noi, e le nostre stagioni saranno buone e lunghe. Prometto di amarti, onorarti e amarti, qualunque cosa accada, finché vivremo. Ricorda, ti sosterrò sempre tra le mie mani.</p>
+            {% else %}    
+                <figure class="icon">
+                    {% include 'svgs/elena.svg' %}
+                </figure>
+                <h3>Elena</h3>
+                <p>On this day I, Elena, vow to you, Roman, to always be your wings in order to take you higher when you are about to fall, but also to take you far beyond the stars where happiness is ours. I promise to love you, respect you and support you for all the years ahead of us. Always motivated by the intention of making our lives an exciting work of art, lived fully in the arms of one another. If our souls will grow apart, I make today an everlasting vow to find the way to you, and be together forever more.</p>
+                <figure class="icon">
+                    {% include 'svgs/roman.svg' %}
+                </figure>
+                <h3>Roman</h3>
+                <p>Elena, I love you, micetta. Today I give myself to you in marriage. I promise to encourage and inspire you, to laugh with you, and to comfort you in times of sorrow and struggle. There is only one life before us, and our seasons will be good and long. I promise to love, honour, and cherish you, no matter what, for as long as we shall live. Remember, I always will hold you with my hands.</p>
+            {% endif %}
+        </div>
+    </div>
+</section>
