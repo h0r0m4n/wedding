@@ -364,6 +364,8 @@
             .section-theme--2 .container h5, 
             .section-theme--2 .container h6 { color: var(--color-gold-2) }
 
+            .section-theme--2 hr { opacity: 0.5 }
+
             /* Theme 3 */
 
             .section-theme--3 .container {
@@ -372,6 +374,22 @@
 
             @media (min-width: 37.5rem) {
                 .section-theme--1 .container { border-width: 4px }
+            }
+
+            /* Photos & Videos */
+
+            .photos-and-videos a {
+                padding: 0.5em 1em;
+                background-color: var(--color-gold-2);
+                color: var(--color-white);
+                border-radius: var(--radius-2);
+                text-decoration: none;
+                transition: all 150ms ease-in;
+            }
+
+            .photos-and-videos a:hover,
+            .photos-and-videos a:focus {
+                background-color: var(--color-gold-3);
             }
 
             /* Location & Booking */
