@@ -12,6 +12,10 @@
             "en": "Welcome",
             "it": "Benvenuti"
         },
+        "vows": {
+            "en": "Marriage Vows",
+            "it": "Promesse di Matrimonio"
+        },
         "dresscode": {
             "en": "Dress code",
             "it": "Abbigliamento"
@@ -45,7 +49,7 @@
         "en": "Top",
         "it": "Torna all’inizio"
     },
-    "version": "1.8.3",
+    "version": "1.9",
     "url": "https://wedding.horoman.com",
     "author": "Roman & Elena"
 }
