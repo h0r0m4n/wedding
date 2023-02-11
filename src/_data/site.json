@@ -39,6 +39,10 @@
         "contacts": {
             "en": "Contacts",
             "it": "Contatti"
+        },
+        "thanks": {
+            "en": "Thanks",
+            "it": "Ringraziamenti"
         }
     },
     "rights": {
@@ -53,7 +57,7 @@
         "en": "Top",
         "it": "Torna all’inizio"
     },
-    "version": "2.1",
+    "version": "2.2",
     "url": "https://wedding.horoman.com",
     "author": "Roman & Elena"
 }
