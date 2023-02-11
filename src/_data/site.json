@@ -13,8 +13,8 @@
             "it": "Benvenuti"
         },
         "vows": {
-            "en": "Marriage Vows",
-            "it": "Promesse di Matrimonio"
+            "en": "Marriage Vows & Ritual",
+            "it": "Promesse di Matrimonio e Rituale"
         },
         "media": {
             "en": "Photos & Videos",
@@ -53,7 +53,7 @@
         "en": "Top",
         "it": "Torna all’inizio"
     },
-    "version": "2.0",
+    "version": "2.1",
     "url": "https://wedding.horoman.com",
     "author": "Roman & Elena"
 }
