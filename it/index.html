@@ -185,6 +185,19 @@
                 text-decoration-skip: none;
             }
 
+            ul li {
+                margin-bottom: 0.5em;
+            }
+
+            ul ul {
+                padding-left: 0;
+                list-style: none;
+            }
+
+            ul li > ul li {
+                margin-bottom: 0;
+            }
+
             hr {
                 column-span: all;
                 border: 0;
@@ -198,6 +211,14 @@
 
             @media (min-width: 37.5rem) {
                 hr { margin: var(--space-medium) 0 }
+            }
+
+            /* Media -------------------------------------------------------- */
+
+            img {
+                height: auto;
+                width: 100%;
+                border-radius: var(--radius-1);
             }
 
             /* Helpers ------------------------------------------------------ */
@@ -564,7 +585,7 @@
                         <a href="#benvenuti">Benvenuti</a>
                     </li>
                     <li>
-                        <a href="#promesse-di-matrimonio">Promesse di Matrimonio</a>
+                        <a href="#promesse-di-matrimonio-e-rituale">Promesse di Matrimonio e Rituale</a>
                     </li>
                     <li>
                         <a href="#foto-e-video">Foto e Video</a>
@@ -583,6 +604,9 @@
                     </li>
                     <li>
                         <a href="#contatti">Contatti</a>
+                    </li>
+                    <li>
+                        <a href="#ringraziamenti">Ringraziamenti</a>
                     </li>
             </ul>
         </div>
@@ -693,14 +717,14 @@
         </div>
     </div>
 </section>
-<section id="promesse-di-matrimonio" class="marriage-vows section section-theme--2">
+<section id="promesse-di-matrimonio-e-rituale" class="marriage-vows-and-ritual section section-theme--2">
     <div class="container">
         <div class="section-header">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 776 256">
   <path stroke="#D2A24F" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="1.5" stroke-width="2" d="M521.308 32v34.584M505 49.297l32.608-.006m-28.784 9.873 24.958-19.737m-23.487-1.444L532.319 60.6M556.22 104v52.371M533 130.175l46.442-.01m-41.002 14.967 35.547-29.888m-33.448-2.198 31.368 34.248M206.22 91v52.371M183 117.175l46.442-.01m-41.002 14.967 35.547-29.888m-33.448-2.198 31.368 34.248M606.147 39v29.644M593 53.813l26.288-.006m-22.778-8.921 19.27 17.88M158.147 163v29.644M145 177.812l26.288-.005m-22.778-8.921 19.27 17.881M245.087 183.752l-17.292 29.951m-5.48-23.125 28.243 16.298m-29.865-5.841 31.484-4.614m-19.618-12.994 7.765 30.599"/>
   <path stroke="#D2A24F" stroke-linejoin="round" stroke-width="4" d="M350.731 70.168c-35.75 0-64.731 28.964-64.731 64.693s28.981 64.693 64.731 64.693c35.75 0 64.731-28.964 64.731-64.693s-28.981-64.693-64.731-64.693Zm0 0 35.307-23.524L374.269 29h-47.077l-11.769 17.644 35.308 23.524ZM490 162.307C490 198.036 461.019 227 425.269 227c-35.75 0-64.731-28.964-64.731-64.693s28.981-64.693 64.731-64.693c35.75 0 64.731 28.964 64.731 64.693Z"/>
 </svg>
-            <h2>Promesse di Matrimonio</h2>
+            <h2>Promesse di Matrimonio e Rituale</h2>
         </div>
         <div class="section-body">
             
@@ -737,6 +761,17 @@
                 </figure>
                 <h3>Roman</h3>
                 <p>Elena, ti amo, micetta. Oggi mi dono a te in matrimonio. Prometto di incoraggiarti e ispirarti, di ridere con te e di confortarti nei momenti di dolore e lotta. C'è solo una vita davanti a noi, e le nostre stagioni saranno buone e lunghe. Prometto di amarti, onorarti e amarti, qualunque cosa accada, finché vivremo. Ricorda, ti sosterrò sempre tra le mie mani.</p>
+                <hr>
+                <h2>Cerimonia del Handfasting</h2>
+                <p>L'handfasting è un antico rituale celtico, da qui deriva l'origine del termine inglese “Tying the knot” (stringere il nodo). Si utilizzava prima che molte persone potessero permettersi di scambiarsi gli anelli. Oggigiorno si utilizza per offrire alla coppia la benedizione degli elementi di Acqua, Terra, Fuoco e Aria e ciò che simboleggiano nelle tradizioni celtiche.</p>
+                <img srcset="/static/handfasting-ceremony.jpg 1x, /static/handfasting-ceremony@1.5x.jpg 1.5x, /static/handfasting-ceremony@2x.jpg 2x" alt="">
+                <ul>
+                    <li><strong>Verde</strong> (Kyle - amico degli sposi) Benedicendo questa unione con i doni della Terra, di salute e ricchezza, poiché queste sono le mani che costruiranno con te nei momenti di forza e ti sosterranno nei momenti di bisogno.</li>
+                    <li><strong>Rosso</strong> (Tebas - testimone e amico caro) Benedicendo questa unione con i doni della Fiamma della passione e del romanticismo, poiché queste sono le mani che ti terranno mentre balli e ti mostreranno amore.</li>
+                    <li><strong>Blu</strong> (Nataliya- sorella di Roman) Benedicendo questa unione con i doni delle Acque della pace e della chiara comunicazione, poiché queste sono le mani che diranno la verità e risolveranno i problemi con te.</li>
+                    <li><strong>Giallo</strong> (Oksana - Mamma di Roman) Benedicendo questa unione con i doni del Cielo con gioia e risate, poiché queste sono le mani che ti condurranno nelle avventure e ti aiuteranno a rispolverarti se cadi.</li>
+                    <li><strong>Viola</strong> (Medbh - Celebratrice) Benedetta sia questa unione con i doni degli Eteri, dell'innocenza e dell'alchimia, perché queste sono le mani che ti mostreranno la magia e creeranno con te le storie della tua vita.</li>
+                </ul>
             
         </div>
     </div>
@@ -753,6 +788,7 @@
         <div class="section-body">
             
                 <p>Siamo emozionati di condividere con voi le memorie di questo giorno speciale. È un piacere vedervi intorno a noi e ricordarci dell’amore che ci avete mostrato quel giorno. Siamo eternamente grati per la vostra presenza e per lo sforzo che avete fatto per essere presenti il giorno del nostro matrimonio.</p>
+                <img srcset="/static/media.jpg 1x, /static/media@1.5x.jpg 1.5x, /static/media@2x.jpg 2x" alt="">
                 <p>Di seguito c’è il link di Google Photos, creato per condividere queste preziose memorie. Noi stiamo caricando sia le foto e i video fatti da noi sia quelli fatti dalla fotografa e dall’operatore video.<br>Ti saremmo grati se potessi caricare lì le foto e i video che hai fatto tu quel giorno.</p>
                 <br>
                 <a href="https://photos.app.goo.gl/w4uRyG88GXg1E8Le8" rel="noopener noreferrer nofollow" target="_blank">Album Condiviso</a>
@@ -1204,10 +1240,135 @@
         </div>
     </div>
 </section>
+<section id="ringraziamenti" class="thanks section section-theme--1">
+    <div class="container">
+        <div class="section-header">
+            <h2>Ringraziamenti</h2>
+        </div>
+        <div class="section-body">
+            
+                <p>Un grande grazie dal profondo del nostro cuore a coloro che hanno partecipato al nostro matrimonio. Avete reso quel giorno ancora più speciale mostrandoci il vostro amore come mai prima d'ora. Abbiamo sentito che le persone che hanno partecipato erano coloro che volevano davvero esserci, motivati da un affetto puro e onesto. Saremo per sempre grati e onorati di aver trascorso con voi il giorno del nostro matrimonio.</p>
+                <p>Un grazie speciale a:</p>
+                <ul>
+                    <li>
+                        <strong>Le bellissime damigelle:</strong>
+                        <ul>
+                            <li>Ariella de’ Navasquez</li>
+                            <li>Claudia Grisanti </li>
+                            <li>Francesca Nigro</li>
+                            <li>Benedetta Lustri (dall’Italia)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>L’unico e il solo best man:</strong>
+                        <ul>
+                            <li>Massimo Ruggiriello</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>I nostri cari testimoni:</strong>
+                        <ul>
+                            <li>Tebas Santana Martinez</li>
+                            <li>Slawomir Malczewski</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Il DJ della cerimonia:</strong>
+                        <ul>
+                            <li>Paulo Castro Malczewski</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Coloro che hanno stretto il nodo:</strong>
+                        <ul>
+                            <li>Kyle Rumbaua</li>
+                            <li>Tebas Santana Martinez</li>
+                            <li>Nataliya Horokhovatska</li>
+                            <li>Oxana Horokhovatska</li>
+                            <li>Medbh Boyle</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Discorso tenuto da:</strong>
+                        <ul>
+                            <li>Giuseppina Gianni</li>
+                            <li>Livio Loiotile</li>
+                            <li>Oksana Horokhovatska</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>La nostra celebratrice:</strong>
+                        <ul>
+                            <li>Medbh Boyle</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Parrucchiera:</strong>
+                        <ul>
+                            <li>Claire Barry</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>La nostra dolce fotografa:</strong>
+                        <ul>
+                            <li>Iwona Kwiatkowska</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>L’operatore video:</strong>
+                        <ul>
+                            <li>Michal Rygielski</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>I vicitori della sfida:</strong>
+                        <ul>
+                            <li>
+                                <strong>1º classificati – Tavolo Gingerbread Man</strong>
+                                <ul>
+                                    <li>Francesca Nigro</li>
+                                    <li>Nikhil Dasari</li>
+                                    <li>Luca Loiotile</li>
+                                    <li>Ariella de’ Navasquez</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>2º classificati – Tavolo Kutia</strong>
+                                <ul>
+                                    <li>Massimo Gianni</li>
+                                    <li>Fabiola Gianni</li>
+                                    <li>Oksana Horokhovatska</li>
+                                    <li>Nataliya Horokhovatska</li>
+                                    <li>Giuseppina Gianni</li>
+                                    <li>Livio Loiotile</li>
+                                    <li>Lucilla Loiotile</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>L’amico che è andato via prima:</strong>
+                        <ul>
+                            <li>Federico Lustrissimi</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Una nuova amica:</strong>
+                        <ul>
+                            <li>Alessandra</li>
+                        </ul>
+                    </li>
+                </ul>
+                <br>
+                <h2>Grazie!</h2>
+            
+        </div>
+    </div>
+</section>
 </main>
 <footer>
     <div class="container">
-        <p class="small">© Il matrimonio di Elena &amp; Roman 2022. Tutti i diritti riservati. Versione v2.0. <a href="#top">Torna all’inizio</a></p>
+        <p class="small">© Il matrimonio di Elena &amp; Roman 2022. Tutti i diritti riservati. Versione v2.2. <a href="#top">Torna all’inizio</a></p>
         <p>&#10084;</p>
     </div>
 </footer>
