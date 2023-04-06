@@ -43,6 +43,10 @@
         "thanks": {
             "en": "Thanks",
             "it": "Ringraziamenti"
+        },
+        "winners": {
+            "en": "Winners",
+            "it": "Vincitori"
         }
     },
     "rights": {
