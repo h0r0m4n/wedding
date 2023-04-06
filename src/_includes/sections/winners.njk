@@ -1,0 +1,22 @@
+<section id="{{ site.sections.winners[locale] | slugify }}" class="{{ site.sections.winners.en | slugify }} section section-theme--2">
+    <div class="container">
+        <div class="section-header">
+            {% include 'svgs/winners.svg' %}
+            {% if locale == 'it' %}
+                <h2>I vincitori della sfida</h2>
+            {% else %}
+                <h2>The challenge’s winners:</h2>
+            {% endif %}
+        </div>
+        <div class="section-body">
+            {% if locale == 'it' %}
+                <p><b>1º classificati – Tavolo Gingerbread Man</b></p>
+                <img srcset="/static/winners-it.jpg 1x, /static/winners-it@1.5x.jpg 1.5x, /static/winners-it@2x.jpg 2x" alt="">
+            {% else %}
+                <p><b>1º place – Table Gingerbread Man</b></p>
+                <img srcset="/static/winners-en.jpg 1x, /static/winners-en@1.5x.jpg 1.5x, /static/winners-en@2x.jpg 2x" alt="">
+            {% endif %}
+            <p>Ariella de’ Navasquez, Nikhil Dasari, Francesca Nigro, Luca Loiotile.</p>
+        </div>
+    </div>
+</section>
