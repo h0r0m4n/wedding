@@ -451,6 +451,23 @@
                 font-size: 0.75em;
             }
 
+            /* Winners */
+
+            .winners p:first-of-type { margin-bottom: 0 }
+            .winners p:last-of-type { margin-top: 0 }
+
+            .winners img {
+                margin-inline: -1rem;
+                width: calc(100% + 2rem);
+            }
+
+            @media (min-width: 37.5rem) {
+                .winners img {
+                    margin-inline: -1.25rem;
+                    width: calc(100% + 2.5rem);
+                }
+            }
+
             /* Cards -------------------------------------------------------- */
 
             .cards {
